@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d_printing_mastery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="3d_printing_mastery.css">
+</head>
+<body>
+
+    <!-- _____________________________________navbar______________________________________________________________________ -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container custom-container">
+          <a href="../index.html" class="d-flex align-items-center">
+            <div class="logo-container">
+              <img src="../images/new-logo.png" class="logo-img" alt="Logo" />
+            </div>        
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-3"><a class="nav-link" href="../Maker-Hub/makerhub.html">3D Printing</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="../Kits/kits-home.html">Kits</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="../mentoring.html">Mentoring</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="../aboutus.html">About Us</a></li>
+              <li class="nav-item mx-3"><a class="nav-link" href="../contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Floating Buttons -->
+      <div class="floating-buttons">
+        <a href="workshop.html" class="floating-btn">
+          <img src="../images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
+          <span>WORKSHOP</span>
+        </a>
+      </div>
+
+      <div class="floating-buttons2">
+        <a href="../makerhub_product.html" class="floating-btn2">
+          <img src="../images/icons_for_floating_button/Group 329-1.png" alt="Workshop Icon" class="icon-flot" />
+          <span>PRODUCTS</span>
+        </a>
+      </div>
+
+      <div class="floating-container">
+        <div class="button-wrapper">
+          <div class="floating-btn4">
+            <i class="fas fa-share-alt"></i>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOIN US Floating Button -->
+      <div class="joinus-floating-container">
+        <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
+          <img src="../images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png"
+            alt="Workshop Icon" class="icon-flot" />
+          <span>JOIN US</span>
+        </button>
+
+        <div class="joinus-extra-buttons" id="joinusExtraButtons">
+          <a href="../Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
+          <a href="../Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+        </div>
+      </div>
+
+      <script>
+        function toggleJoinUsButtons() {
+          const buttons = document.getElementById("joinusExtraButtons");
+          buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
+        }
+      </script>
+    
+    <!-- In your <head> -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      
+    
+    <!-- _____________________________________________hero section________________________________________________________ -->
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+        data-bs-interval="2000">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('./images/3d-printing-workshop-carousel-images/3d-printing-machine_144962-7439.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>3D Printing</em> </p>
+                        <p><em>Mastery</em> </p>
+                        <p><em>Workshop!</em></p>
+                    </div>
+                    <p>
+                        Elarchitek 3D Printing Workshop 
+                        offers hands-on learning in design 
+                        and prototyping. Create real-world 
+                        models using 3D printing 
+                        technology!
+                    </p>
+                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/3d-printing-progress_93675-31475.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>3D Printing</em> </p>
+                        <p><em>Mastery</em> </p>
+                        <p><em>Workshop!</em></p>
+                    </div>
+                    <p>
+                        Elarchitek 3D Printing Workshop 
+                        offers hands-on learning in design 
+                        and prototyping. Create real-world 
+                        models using 3D printing 
+                        technology!
+                    </p>
+                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
+                </div>
+            </div>
+
+
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/cnc-laser-machinery-metal-cutting_103577-5018.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>3D Printing</em> </p>
+                        <p><em>Mastery</em> </p>
+                        <p><em>Workshop!</em></p>
+                    </div>
+                    <p>
+                        Elarchitek 3D Printing Workshop 
+                        offers hands-on learning in design 
+                        and prototyping. Create real-world 
+                        models using 3D printing 
+                        technology!
+                    </p>
+                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/designer-using-3d-printer.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>3D Printing</em> </p>
+                        <p><em>Mastery</em> </p>
+                        <p><em>Workshop!</em></p>
+                    </div>
+                    <p>
+                        Elarchitek 3D Printing Workshop 
+                        offers hands-on learning in design 
+                        and prototyping. Create real-world 
+                        models using 3D printing 
+                        technology!
+                    </p>
+                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
+                </div>
+            </div>
+
+<!-- Slide 4 -->
+<div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/industrial-laser-cut-machine-while-cutting-sheet-metal-with-sparking-light-free-space-right-side-text_67340-579.png');">
+    <div class="carousel-caption">
+        <div class="hero-text">
+            <p><em>3D Printing</em> </p>
+            <p><em>Mastery</em> </p>
+            <p><em>Workshop!</em></p>
+        </div>
+        <p>
+            Elarchitek 3D Printing Workshop 
+            offers hands-on learning in design 
+            and prototyping. Create real-world 
+            models using 3D printing 
+            technology!
+        </p>
+        <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
+    </div>
+</div>
+
+
+<!-- Slide 4 -->
+<div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/industrial-laser-cut-machine-while-cutting-sheet-metal-with-sparking-light-free-space-right-side-text_67340-579.png');">
+    <div class="carousel-caption">
+        <div class="hero-text">
+            <p><em>3D Printing</em> </p>
+            <p><em>Mastery</em> </p>
+            <p><em>Workshop!</em></p>
+        </div>
+        <p>
+            Elarchitek 3D Printing Workshop 
+            offers hands-on learning in design 
+            and prototyping. Create real-world 
+            models using 3D printing 
+            technology!
+        </p>
+        <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
+    </div>
+</div>
+       
+        </div>
+    </div>
+
+    <!-- _________________________________________mentor section_________________________________________________________________________ -->
+    <div class="container my-5">
+        <div class="row align-items-center g-4">
+            <!-- Left Column -->
+            <div class="col-lg-7">
+                <div class="d-flex align-items-center mb-2 flex-wrap">
+                    <span class="text-decoration-line-through text-muted me-3">Rs. 2,999.00</span>
+                    <span class="fw-bold fs-5 text-dark me-3">Rs.999.00</span>
+                    <span class="text-success fw-semibold">45% off</span>
+                </div>
+                <h4 class="fw-bold mb-3">Why you should attend this workshop ?</h4>
+                <p class="text-muted">
+                    Tamil Nadu is rapidly emerging as a <strong>global hotspot</strong> for
+                    Electronics and Robotics Manufacturing, and this workshop is your gateway
+                    to step confidently into this futuristic world. Whether you're a student
+                    or a <strong>tech enthusiast</strong>, this is your chance to gain practical
+                    knowledge and <strong>hands-on exposure</strong>.
+                </p>
+            </div>
+
+            <!-- Right Column (Mentor Card) -->
+            <div class="col-lg-5">
+                <div class="mentor-card">
+                    <div class="d-flex align-items-start">
+                        <img src="./images/workshop4.png" alt="Mentor Image" class="mentor-img">
+                        <div>
+                            <span class="badge badge-dark mb-2">Mentor</span>
+                            <h6 class="fw-bold mb-2">Kottesh</h6>
+                            <p class="text-muted mb-2">
+                                An experienced professional in the dynamic field of science and technology, founded LEMS
+                                Academy in Chennai in 2014.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ________________________________________dropdown____________________________________________________________________ -->
+    <div class="container">
+        <div class="row">
+            <!-- Left Column: Accordion -->
+            <div class="col-md-6">
+
+                <h2 class="text-center fw-bold pb-4">What You’ll Learn</h2>
+                <div class="accordion" id="workshopAccordion">
+
+                    <!-- Workshop Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingZero">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+                            To Explore Thriving Opportunities
+                          </button>
+                        </h2>
+                        <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingZero"
+                          data-bs-parent="#workshopAccordion">
+                          <div class="accordion-body dropdown-card">
+                            <p>
+                              Understand how Electronics is the backbone of modern industries including consumer
+                              products, automotive, healthcare, defense, and IoT systems. Learn about the rising
+                              demand for skilled electronics engineers in both national and global markets — and how you can build your path in this expanding field.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                              
+                                        <!-- Item 1 -->
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                              Master the Core Components
+                                            </button>
+                                          </h2>
+                                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                            data-bs-parent="#workshopAccordion">
+                                            <div class="accordion-body">
+                                              Explore the fundamentals of electronics — including resistors, capacitors,
+                                              diodes, transistors, ICs, and sensors. Learn their real-world applications,
+                                              understand circuit design, and develop the skill to troubleshoot and build
+                                              functional electronic systems.
+                                            </div>
+                                          </div>
+                                        </div>
+                              
+                                        <!-- Item 2 -->
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              Tamil Language Instructions
+                                            </button>
+                                          </h2>
+                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                            data-bs-parent="#workshopAccordion">
+                                            <div class="accordion-body">
+                                              All sessions are designed to explain complex electronic
+                                              concepts in easy-to-understand Tamil, paired with real-life
+                                              practical examples. Technical English terms will be explained
+                                              clearly, and live Q&A support ensures full understanding for every student.
+                                            </div>
+                                          </div>
+                                        </div>
+                              
+                                        <!-- Item 3 -->
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                              Empower Yourself for the Future
+                                            </button>
+                                          </h2>
+                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                            data-bs-parent="#workshopAccordion">
+                                            <div class="accordion-body">
+                                              To Explore Thriving Opportunities
+                                              Understand how Electronics is the backbone of
+                                              modern industries including consumer products,
+                                              automotive, healthcare, defense, and IoT systems.
+                                              Learn about the rising demand for skilled electronics
+                                              engineers in both national and global markets — and how you can build your path in this expanding field.
+                                            </div>
+                                          </div>
+                                        </div>
+                              
+                                        <!-- Item 4 -->
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                              Hands-On Electronic Project Building
+                                            </button>
+                                          </h2>
+                                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                            data-bs-parent="#workshopAccordion">
+                                            <div class="accordion-body">
+                                              Get guided practice in assembling, wiring, and testing basic
+                                              electronic circuits. Learn how to read circuit diagrams, use
+                                              multimeters, and debug real hardware issues — turning theory
+                                              into practical, job-ready skills.
+                                            </div>
+                                          </div>
+                                        </div>
+                              
+                                        <!-- Item 5 -->
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingFive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                              Introduction to Microcontrollers & Sensors
+                                            </button>
+                                          </h2>
+                                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                            data-bs-parent="#workshopAccordion">
+                                            <div class="accordion-body">
+                                              Begin with microcontroller basics like Arduino — understand how digital and analog
+                                              inputs/outputs work, how sensors interact with circuits, and how to program them for
+                                              real-world automation applications.
+                                            </div>
+                                          </div>
+                                        </div>
+                              
+                                        <!-- Item 6 -->
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingSix">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                              Career Guidance & Industry Insights
+                                            </button>
+                                          </h2>
+                                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                            data-bs-parent="#workshopAccordion">
+                                            <div class="accordion-body">
+                                              Get expert advice on building a project-based portfolio, understanding job roles in
+                                              core electronics industries, and planning your path for:
+                                              • Electronics engineering jobs
+                                              • Freelance circuit design projects
+                                              • Starting your own tech venture
+                                              • Higher studies in Embedded Systems, IoT, and Automation fields.
+                                            </div>
+                                          </div>
+                                        </div>
+                              
+                                      </div>
+                                    </div>
+            <div class="col-md-6 col-12">
+                <div class="card" style="border-radius:20px !important">
+                    <div class="card-body" style="padding: 20px;line-height:50px;">
+                        <h5 class="card-title">WorkShop Details</h5>
+                        <ul class="list-unstyled pt-4">
+                            <li class="workshop-detail-item">
+                                <i class="fa-solid fa-calendar-days"> 🗓️</i>
+                                Date
+                                <span class="sub-cont">Sunday, February 23, 2025</span>
+                            </li>
+                            <li class="workshop-detail-item">
+                                <i class="fa-solid fa-globe">🌐</i>
+                                Language
+                                <span class="sub-cont">Tamil</span>
+                            </li>
+                            <li class="workshop-detail-item">
+                                <i class="fa-solid fa-user-graduate">🎂</i>
+                                Age
+                                <span class="sub-cont">11th std to Working Professionals</span>
+                            </li>
+                            <li class="workshop-detail-item">
+                                <button class="register-btn">Register Now ₹999.00</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- check -->
+    <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div> -->
+
+    <!-- __________________________________________certificate section ____________________________________________________________ -->
+
+    <div class="badge-container">
+        <h1 class="badge-title">Certified Achievement Badge</h1>
+        <p class="badge-text">
+            Receive an official <strong>Elarcitek STEM Workshop certificate</strong> upon successful completion — a
+            valuable proof of your
+            <strong>hands-on experience</strong> in
+            <strong>Science, Technology, Engineering,</strong> and
+            <strong>Mathematics</strong>. This certificate will strengthen your resume and showcase your
+            <strong>commitment to practical learning</strong> for future
+            <strong>academic</strong> and <strong>career opportunities</strong>.
+        </p>
+    </div>
+
+   <div class="container">
+    <div class="row">
+      <div class="col-12 certificate-section">
+       
+          <img src="./images/certificate_3d.jpg" alt="Certificate Image" class="certificate-image" />
+
+      </div>
+    </div>
+   </div>
+  
+
+    <!-- _________________________________________imagecontent_______________________________________________________________________ -->
+    <section class="design-challenges">
+        <div class="design-img">
+            <img src="./images/workshop-balance-images/3d_matery1.png" alt="STEM Illustration" />
+        </div>
+        <div class="design-text">
+            <h2>3D Design Essentials for Printing</h2>
+            <p style="font-size: 23px; font-weight: 500; color: #555555; line-height: 1.6; margin: 0 auto;">
+                Learn the basics of 3D modeling software and 
+understand key design principles for successful 
+prints. Create simple models optimized for the 
+3D printing process, focusing on elements like 
+overhangs and support needs
+            </p>
+        </div>
+    </section>
+
+    <section class="design-challenges">
+
+        <div class="design-text">
+            <h2> The 3D Print Process</h2>
+            <p style="font-size: 23px; font-weight: 500; color: #555555; line-height: 1.6; margin: 0 auto;">
+                Explore the FDM 3D printing process and the 
+                role of slicing software. Understand essential 
+                printer settings and their impact on the final 
+                output quality.
+
+            </p>
+        </div>
+        <div class="design-img">
+            <img src="./images/workshop-balance-images/3d_mastery2.png" alt="STEM Illustration" />
+        </div>
+    </section>
+
+    <section class="design-challenges">
+        <div class="design-img">
+            <img src="./images/workshop-balance-images/3d_mastery3.png" alt="STEM Illustration" />
+        </div>
+        <div class="design-text mb-4">
+            <h2> Real-World 3D Printing Applications & 
+                Innovation</h2>
+            <p style="font-size: 23px; font-weight: 500; color: #555555; line-height: 1.6; margin: 0 auto;">
+                Discover the wide range of applications for 3D 
+printing in various industries. See inspiring 
+examples of innovative projects and brainstorm 
+your own creative ideas
+            </p>
+        </div>
+    </section>
+ <!-- __________________________________________footer_____________________________________________________________________________ -->
+
+ <footer>
+    <div class="footer-main">
+      <!-- Logo -->
+      <div class="footer-col">
+        <img src="./images/elarchi-icon.png" alt="Elarchitek Logo" class="footer-logo" />
+      </div>
+
+      <!-- Column 1 -->     
+      <div class="footer-col">
+        <h4>Products</h4>
+        <p>Home</p>
+        <p>Robotic Kit</p>
+        <p>Computer Kit</p>
+        <p>STEM Kit</p>
+      </div>
+
+        <!-- Vertical Divider -->
+        <div class="divider"></div>
+
+      <!-- Column 2 -->
+      <div class="footer-col">
+        <h4>Workshops</h4>
+        <p>Maker Hub</p>
+        <p>Robotic Workshop</p>
+        <p>Computer Workshop</p>
+        <p>STEM Workshop</p>
+      </div>
+
+        <!-- Vertical Divider -->
+        <div class="divider"></div>
+
+      <!-- Column 3 -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <p>3D Printing Workshop</p>
+        <p>Learning Center</p>
+        <p>About Us</p>
+        <p>Contact Us</p>
+      </div>
+
+
+        <!-- Contact Info -->
+        <div class="footer-col contact-info">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
+          <p><i class="fas fa-phone"></i> +91-1234567890</p>
+          <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
+        </div>
+  
+    </div>
+
+    
+
+    <hr class="footer-divider" />
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <p>Terms-and-conditions</p>
+        <p>Privacy-policy</p>
+      </div>
+      <div class="footer-social">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Elarchitek. All rights reserved. Empowering Innovation Through Electronics.</p>
+  </footer>
+
+
+<!-- ______________________________________courosil________________________________________________________ -->
+
+
+<div class="carousel-1">
+    <div class="carousel-1-slide">
+      <!-- Logos -->
+      <img src="./images/3d_printing_mastery_rest/3d-kottesh.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/amma-flip.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/blue dragon.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/heart key chain.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/vishal-flip.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/3d-kottesh.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/amma-flip.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/blue dragon.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/heart key chain.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/vishal-flip.png" alt="">
+     
+    </div>
+  </div>
+  
+  <script>
+    const clone1 = document.querySelector(".carousel-1-slide").cloneNode(true);
+    document.querySelector(".carousel-1").appendChild(clone1);
+  </script>
+  
+  
+  <div class="carousel-2">
+    <div class="carousel-2-slide">
+      <!-- Logos -->
+      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-gr.png" alt="courosil-img" class="courosil-right">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-light-yellow.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-light.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-3-light.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-light-2.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-gr.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-light-yellow.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-3-light.png" alt="">
+      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-light-2.png" alt="">
+      
+    </div>
+  </div>
+  
+  <script>
+    const clone2 = document.querySelector(".carousel-2-slide").cloneNode(true);
+    document.querySelector(".carousel-2").insertBefore(clone2, document.querySelector(".carousel-2").firstChild);
+  </script>
+
+    <!-- ____________________________________________________________________________________________________________________ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+
+</body>
+
+</html>

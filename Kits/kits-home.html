@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kits Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="kits-home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="mediaQuery.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container custom-container">
+            <a href="../index.html" class="d-flex align-items-center">
+                <div class="logo-container">
+                    <img src="../images/new-logo.png" class="logo-img" alt="Logo" />
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3"><a class="nav-link" href="../Maker-Hub/makerhub.html">3D Printing</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link active" href="kits-home.html">Kits</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../mentoring.html">Mentoring</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../aboutus.html">About Us</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+      <a href="#workshop-section" class="floating-btn">
+        <img src="../images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
+        <span>WORKSHOP</span>
+      </a>
+    </div>
+
+    <div class="floating-buttons2">
+      <a href="../Maker-Hub/makerhub.html" class="floating-btn2">
+        <img src="../images/icons_for_floating_button/Group 329-1.png" alt="Products Icon" class="icon-flot" />
+        <span>PRODUCTS</span>
+      </a>
+    </div>
+
+    <div class="floating-container">
+      <div class="button-wrapper">
+        <div class="floating-btn4">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="joinus-floating-container">
+      <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
+        <img src="../images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png" alt="Join Us Icon" class="icon-flot" />
+        <span>JOIN US</span>
+      </button>
+      <div class="joinus-extra-buttons" id="joinusExtraButtons">
+        <a href="../Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
+        <a href="../Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleJoinUsButtons() {
+        const buttons = document.getElementById("joinusExtraButtons");
+        buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
+      }
+    </script>
+
+    <!-- In your <head> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- _____________________________________________hero section________________________________________________________ -->
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+        data-bs-interval="2000">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active"
+                style="background-image: url('/images/Kits-Page/Caurosel/boy-fixing-main-board-while-study-construction-by-using-laptop-edification_31965-685956.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Educational</em></p>
+                        <p><em>Science</em></p>
+                        <p><em>Technology</em></p>
+                        <p><em>kits</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Electronic</strong>, <strong>Robotic</strong>, <strong>STEM</strong>,
+                            and <strong>Custom Kits</strong></em> help students explore science and technology through
+                        <strong>hands-on</strong> projects. <em>These kits boost creativity,
+                            <strong>problem-solving</strong>, and technical skills in a fun way.</em>
+                    </p>
+
+                    <a href="#" class="btn-info fw-bold" style="margin: 20px 0;">Explore Our Kits</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item"
+                style="background-image: url('/images/Kits-Page/Caurosel/girl-female-teacher-doing-science-experiments-with-test-tubes-microscope.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Educational</em></p>
+                        <p><em>Science</em></p>
+                        <p><em>Technology</em></p>
+                        <p><em>kits</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Electronic</strong>, <strong>Robotic</strong>, <strong>STEM</strong>,
+                            and <strong>Custom Kits</strong></em> help students explore science and technology through
+                        <strong>hands-on</strong> projects. <em>These kits boost creativity,
+                            <strong>problem-solving</strong>, and technical skills in a fun way.</em>
+                    </p>
+                    <a href="#" class=" btn-info fw-bold">Explore Our Kits</a>
+                </div>
+            </div>
+
+
+            <!-- Slide 3 -->
+            <div class="carousel-item"
+                style="background-image: url('/images/Kits-Page/Caurosel/group-happy-kids-programming-electric-toys-robots-robotics-classroom_52137-35931.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Educational</em></p>
+                        <p><em>Science</em></p>
+                        <p><em>Technology</em></p>
+                        <p><em>kits</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Electronic</strong>, <strong>Robotic</strong>, <strong>STEM</strong>,
+                            and <strong>Custom Kits</strong></em> help students explore science and technology through
+                        <strong>hands-on</strong> projects. <em>These kits boost creativity,
+                            <strong>problem-solving</strong>, and technical skills in a fun way.</em>
+                    </p>
+                    <a href="#" class=" btn-info fw-bold">Explore Our Kits</a>
+                </div>
+            </div>
+
+
+            <!-- Slide 4 -->
+            <div class="carousel-item"
+                style="background-image: url('/images/Kits-Page/Caurosel/nice-optimistic-smart-boy-testing-his-robotic-device-while-beign-involved-engineering-classes_376548-16.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Educational</em></p>
+                        <p><em>Science</em></p>
+                        <p><em>Technology</em></p>
+                        <p><em>kits</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Electronic</strong>, <strong>Robotic</strong>, <strong>STEM</strong>,
+                            and <strong>Custom Kits</strong></em> help students explore science and technology through
+                        <strong>hands-on</strong> projects. <em>These kits boost creativity,
+                            <strong>problem-solving</strong>, and technical skills in a fun way.</em>
+                    </p>
+                    <a href="#" class=" btn-info fw-bold">Explore Our Kits</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- __________________________________________________________________________________________________________ -->
+
+
+    <div class="container-fluid">
+        <div class="kit-container">
+
+            <div class="kit-content">
+                <div class="row">
+                    <h1 class="kits-title">What's inside Elarchitek kits</h1>
+                    <div class="col-xl-6 col-md-6 col-sm-12 elarchi-get-kit">
+                        <p>
+                            A STEM.org certified robotics kit, crafted by experts from
+                            <strong>IIT Kanpur</strong>, <strong>IIT Bombay</strong>, and professionals from
+                            <strong>Microsoft</strong>, <strong>Amazon</strong>, and <strong>Intel</strong>. Enables the
+                            creation of
+                            1000+ robotics and IOT projects, nurturing skills in robotics, programming, innovation, and
+                            critical thinking.
+                            Get 2 to 4 complimentary <strong>one-on-one sessions</strong> with specialists
+                            (<strong>worth ₹3000</strong>) to help your child begin their robotics adventure.
+                        </p>
+
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-sm-12">
+                        <img class="kit-image" src="/images/Kits-Page/vector-7 1.png" alt="kit-img" class="kit-img">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mb-5">
+        <h1 class="kits-topic">Let's Build</h1>
+    </div>
+    <!-- ________________________________________________________________________________________________________________ -->
+    <div class="container mb-5">
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="/images/Kits-Page/childrens-learning-entertaining-cartoon-character-vector-illustration-education-media_1317464-46493-removebg-preview 1.png"
+                                alt="Avatar" class="kit-image2">
+                            <h3 class="kit-title">Electronic Kits</h3>
+                            <!-- <button class="explore-btn">Explore</button> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>Electronic Kits</strong> </h1>
+                            <p style="text-align: justify;">Our Electronic Kits are designed to help learners understand
+                                the basics of electronics
+                                through hands-on practice. From simple circuits to working with sensors, these kits
+                                provide a strong foundation for anyone interested in technology. They are perfect for
+                                beginners to explore and build confidence in the world of electronics.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="electronickits.html">Explore</a></button>
+                        </div>
+                          
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/images/Kits-Page/kids-moments-vector-illustration-concept_1253202-56462-removebg-preview.png"
+                                alt="Avatar" class="kit-image2">
+                            <h3 class="kit-title">Robotic Kits</h3>
+                            <!-- <button class="explore-btn"> <a class="explore-button"
+                                    href="robotickits.html">Explore</a></button> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>Robotic Kits</strong> </h1>
+                            <p style="text-align: justify;">With our Robotic Kits, students can build and program their
+                                own robots while learning about automation and movement control. These kits make it easy
+                                to understand how robots work with sensors, motors, and coding. They encourage
+                                creativity, innovation, and problem-solving skills in a fun and interactive way.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="robotickits.html">Explore</a></button>
+                        </div>
+                          
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mb-5 ">
+        <div class="row">
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/images/Kits-Page/a7ec4621-d882-4183-95e6-0996244948de-removebg-preview.png" alt="Avatar"
+                                class="kit-image2">
+                            <h3 class="kit-title">Computer Kits</h3>
+                            <!-- <button class="explore-btn"> <a class="explore-button"
+                                    href="robotickits.html">Explore</a></button> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>Computer Kits</strong> </h1>
+                            <p style="text-align: justify;">Our Computer Kits allow learners to explore the fundamentals
+                                of computer hardware and software. By assembling parts and experimenting with coding,
+                                students gain practical knowledge of computing. These kits make complex concepts simple,
+                                engaging, and easy to understand.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="computerKits.html">Explore</a></button>
+                        </div>
+                          
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/images/Kits-Page/VERCOR-3-removebg-preview.png" alt="Avatar" class="kit-image2">
+                            <h3 class="kit-title">STEM Kits</h3>
+                            <!-- <button class="explore-btn"> <a class="explore-button"
+                                    href="robotickits.html">Explore</a></button> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>STEM Kits</strong> </h1>
+                            <p style="text-align: justify;">The STEM Kits combine Science, Technology, Engineering, and
+                                Math into exciting, project-based learning experiences. They inspire curiosity,
+                                teamwork, and innovation through real-world experiments. These kits are ideal for young
+                                minds eager to explore and solve problems creatively.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="stemkits.html">Explore</a></button>
+                        </div>
+                          
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+
+
+    </script>
+
+
+
+
+    <!-- ___________________________________________ratings__________________________________________________________ -->
+    <section class="rating-section">
+        <!-- Rating Stats -->
+        <div class="rating-left">
+            <div class="rating-score">4.8 <span>★★★★★</span></div>
+            <div class="rating-count">Based on 1,058 reviews</div>
+
+            <div class="rating-bar"><span>5 ★</span>
+                <div>
+                    <div style="width: 90%"></div>
+                </div><span>949</span>
+            </div>
+            <div class="rating-bar"><span>4 ★</span>
+                <div>
+                    <div style="width: 15%"></div>
+                </div><span>48</span>
+            </div>
+            <div class="rating-bar"><span>3 ★</span>
+                <div>
+                    <div style="width: 10%"></div>
+                </div><span>29</span>
+            </div>
+            <div class="rating-bar"><span>2 ★</span>
+                <div>
+                    <div style="width: 6%"></div>
+                </div><span>17</span>
+            </div>
+            <div class="rating-bar"><span>1 ★</span>
+                <div>
+                    <div style="width: 5%"></div>
+                </div><span>15</span>
+            </div>
+        </div>
+
+        <!-- Circle Ratings -->
+        <div class="rating-right">
+            <div class="circle-box">
+                <div class="circle"><span>4.6</span></div>
+                <p>Quality</p>
+            </div>
+            <div class="circle-box">
+                <div class="circle"><span>4.6</span></div>
+                <p>Looks & Design</p>
+            </div>
+            <div class="circle-box">
+                <div class="circle"><span>4.6</span></div>
+                <p>Quality</p>
+            </div>
+            <div class="circle-box">
+                <div class="circle"><span>4.6</span></div>
+                <p>Looks & Design</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Scrolling Text Section -->
+    <div class="scrolling-text-section">
+        <div class="scrolling-container">
+            <div class="scrolling-text">
+                <span class="text-item">
+                    <i class="fas fa-drafting-compass"></i> Design
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-flask"></i> Test
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-graduation-cap"></i> Learn
+                </span>
+                <span class="set-separator"></span>
+                <span class="text-item">
+                    <i class="fas fa-drafting-compass"></i> Design
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-flask"></i> Test
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-graduation-cap"></i> Learn
+                </span>
+                <span class="set-separator"></span>
+                <span class="text-item">
+                    <i class="fas fa-drafting-compass"></i> Design
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-flask"></i> Test
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-graduation-cap"></i> Learn
+                </span>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- __________________________________________________________________________________________________________-->
+    <!-- __________________________________________footer_____________________________________________________________________________ -->
+
+    <footer>
+        <div class="footer-main">
+            <!-- Logo -->
+            <div class="footer-col">
+                <img src="../images/new-logo.png" alt="Elarchitek Logo" class="footer-logo" />
+            </div>
+
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="../index.html">Home</a>
+                <a href="robotickits.html">Robotic Kit</a>
+                <a href="electronickits.html">Computer Kit</a>
+                <a href="stemkits.html">STEM Kit</a>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="divider"></div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Workshops</h4>
+                <a href="../Maker-Hub/makerhub.html">3D Printing</a>
+                <a href="../roboticmastery.html">Robotic Workshop</a>
+                <a href="../electronic_mastery.html">Computer Workshop</a>
+                <a href="../stem.html">STEM Workshop</a>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="divider"></div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="../3d_printing_mastery.html">3D Printing Workshop</a>
+                <a href="../Maker-Hub/makerhub.html">Learning Center</a>
+                <a href="../aboutus.html">About Us</a>
+                <a href="../contactus.html">Contact Us</a>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="divider"></div>
+
+            <!-- Contact Info -->
+            <div class="footer-col contact-info">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
+                <p><i class="fas fa-phone"></i> +91-1234567890</p>
+                <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="footer-divider" />
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <p>Terms-and-conditions</p>
+                <p>Privacy-policy</p>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Elarchitek. All rights reserved. Empowering Innovation Through Electronics.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

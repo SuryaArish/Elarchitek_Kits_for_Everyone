@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>makerhub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="makerhub.css">
+</head>
+<body>
+
+
+  <!-- _____________________________________navbar______________________________________________________________________ -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container custom-container">
+      <a href="../index.html" class="d-flex align-items-center">
+        <div class="logo-container">
+          <img src="../images/new-logo.png" class="logo-img" alt="Logo" />
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-3"><a class="nav-link" href="makerhub.html">3D Printing</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../Kits/kits-home.html">Kits</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../mentoring.html">Mentoring</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../aboutus.html">About Us</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <a href="#workshop-section" class="floating-btn">
+      <img src="../images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
+      <span>WORKSHOP</span>
+    </a>
+  </div>
+
+  <div class="floating-buttons2">
+    <a href="makerhub.html" class="floating-btn2">
+      <img src="../images/icons_for_floating_button/Group 329-1.png" alt="Products Icon" class="icon-flot" />
+      <span>PRODUCTS</span>
+    </a>
+  </div>
+
+  <div class="floating-container">
+    <div class="button-wrapper">
+      <div class="floating-btn4">
+        <i class="fas fa-share-alt"></i>
+      </div>
+      <div class="social-icons">
+        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="joinus-floating-container">
+    <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
+      <img src="../images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png" alt="Join Us Icon" class="icon-flot" />
+      <span>JOIN US</span>
+    </button>
+    <div class="joinus-extra-buttons" id="joinusExtraButtons">
+      <a href="../Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
+      <a href="../Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleJoinUsButtons() {
+      const buttons = document.getElementById("joinusExtraButtons");
+      buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+
+    <!-- In your <head> -->
+
+    
+    <!-- ____________________________________________hero section_______________________________________________________ -->
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+        data-bs-interval="2000">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active"
+                style="background-image: url('/images/MakerHub-Images/3d-printing-progress_93675-41306.png');">
+                
+                    <div class="carousel-caption">
+                        <div class="hero-text">
+                            <p><em>Modern</em></p>
+                            <p><em>Tools</em></p>
+                            <p><em>Bold</em></p>
+                            <p><em>Dreams</em></p>
+                        </div>
+                        <p class="hero-description">
+                            Bring your boldest ideas to life with our premium selection of maker tools.
+                        </p>
+                        <a href="Collections" class="btn btn-info text-black fw-bold">View collection</a>
+                </div>
+        
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item"
+            style="background-image: url('/images/MakerHub-Images/abstract-models-printed-by-3d-printer-closeup_507658-5682.png');">
+        
+                    <div class="carousel-caption">
+                        <div class="hero-text">
+                            <p><em>Modern</em></p>
+                            <p><em>Tools</em></p>
+                            <p><em>Bold</em></p>
+                            <p><em>Dreams</em></p>
+                        </div>
+                        <p class="hero-description">
+                            Bring your boldest ideas to life with our premium selection of maker tools.
+                        </p>
+                        <a href="Collections" class="btn btn-info text-black fw-bold">View collection</a>
+           
+            </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item"
+            style="background-image: url('/images/MakerHub-Images/close-up-3d-printer.png');">
+               
+                    <div class="carousel-caption">
+                        <div class="hero-text">
+                            <p><em>Modern</em></p>
+                            <p><em>Tools</em></p>
+                            <p><em>Bold</em></p>
+                            <p><em>Dreams</em></p>
+                        </div>
+                        <p class="hero-description">
+                            Bring your boldest ideas to life with our premium selection of maker tools.
+                        </p>
+                        <a href="Collections" class="btn btn-info text-black fw-bold">View collection</a>
+              
+            </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item"
+            style="background-image: url('/images/MakerHub-Images/many-abstract-models-bright-colorful-objects-printed-3d-printer-white-table-fused-deposition-modeling-fdm-progressive-modern-additive-technology-concept-4-0-industrial-revolution_507658-185.png');">
+                
+                    <div class="carousel-caption">
+                        <div class="hero-text">
+                            <p><em>Modern</em></p>
+                            <p><em>Tools</em></p>
+                            <p><em>Bold</em></p>
+                            <p><em>Dreams</em></p>
+                        </div>
+                        <p class="hero-description">
+                            Bring your boldest ideas to life with our premium selection of maker tools.
+                        </p>
+                        <a href="Collections" class="btn btn-info text-black fw-bold">View collection</a>
+             
+            </div>
+            </div>
+
+
+            <div class="carousel-item"
+            style="background-image: url('/images/MakerHub-Images/prototype-human-skull-printed-d-printer-from-molten-purple-plastic-threedimensional-model_507658-8026.png');">
+               
+                    <div class="carousel-caption">
+                        <div class="hero-text">
+                            <p><em>Modern</em></p>
+                            <p><em>Tools</em></p>
+                            <p><em>Bold</em></p>
+                            <p><em>Dreams</em></p>
+                        </div>
+                        <p class="hero-description">
+                            Bring your boldest ideas to life with our premium selection of maker tools.
+                        </p>
+                        <a href="Collections" class="btn btn-info text-black fw-bold">View collection</a>
+           
+            </div>
+            </div>
+
+            <div class="carousel-item"
+            style="background-image: url('/images/MakerHub-Images/models-printed-d-printer-isolated-white-background-objects-details-printed-d-printer-from_507658-8526.png');">
+       
+                    <div class="carousel-caption">
+                        <div class="hero-text">
+                            <p><em>Modern</em></p>
+                            <p><em>Tools</em></p>
+                            <p><em>Bold</em></p>
+                            <p><em>Dreams</em></p>
+                        </div>
+                        <p class="hero-description">
+                            Bring your boldest ideas to life with our premium selection of maker tools.
+                        </p>
+                        <a href="#" class="btn btn-info text-black fw-bold">View collection</a>
+                </div>
+         
+            </div>
+            </div>
+            </div>
+
+            <!-- _________________________________________________contet___________________________________________________________________ -->
+
+            <div class="container mt-5 mb-5">
+                <div class="intro-container">
+                    <p class="whyintern-p">Welcome to Elarchitek Makerhub - Where bold ideas meet modern tools. Explore our
+                        selection crafted for creators, builders, and innovators. Shop now and turn your biggest dreams into 
+                    reality with ease and excellence.</p>
+                </div>
+              </div>
+
+<!-- _______________________________________________________________card____________________________________________________________________________ -->
+
+<div class="container-fluid py-5" id="Collections">
+    <h2 class="text-center fw-bold mb-5">Explore Our Products</h2>
+    <div class="row g-4">
+
+      <!-- Product Card 1 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 ">
+          <img src="/images/MakerHub-Images/products/3d-kottesh.png" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹209</h5>
+              <span class="text-decoration-line-through text-muted">₹499</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#productModal1">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat Product Card for others -->
+      <!-- Product Card 2 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100">
+          <img src="/images/MakerHub-Images/products/heart key chain.png" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹399</h5>
+              <span class="text-decoration-line-through text-muted">₹799</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100">
+          <img src="/images/MakerHub-Images/products/amma-flip.png" class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹109</h5>
+              <span class="text-decoration-line-through text-muted">₹199</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#productModal3">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100">
+          <img src="/images/MakerHub-Images/products/blue dragon.png" class="card-img-top" alt="Product 4">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹109</h5>
+              <span class="text-decoration-line-through text-muted">₹199</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#productModal4">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+        
+
+  <!-- ___________________________________________________second row___________________________________________________________________ -->
+
+    <div class="row g-4 mt-4">
+
+      <!-- Product Card 1 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 ">
+          <img src="/images/MakerHub-Images/products/blutooth-light.png" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹209</h5>
+              <span class="text-decoration-line-through text-muted">₹499</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#productModal1">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat Product Card for others -->
+      <!-- Product Card 2 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100">
+          <img src="/images/MakerHub-Images/products/heart key chain.png" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹399</h5>
+              <span class="text-decoration-line-through text-muted">₹799</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100">
+          <img src="/images/MakerHub-Images/products/sittap banana.png" class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹109</h5>
+              <span class="text-decoration-line-through text-muted">₹199</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#productModal1">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100">
+          <img src="/images/MakerHub-Images/products/skull-3-light.png" class="card-img-top" alt="Product 4">
+          <div class="card-body">
+            <p class="card-text text-muted small mb-1">Elarchitek Product</p>
+            <p class="card-text small">Premium Red Fruit Netting Safe, Soft & Shock-Resistant</p>
+            <div class="d-flex align-items-center mb-3">
+              <h5 class="mb-0 me-2 text-success">₹109</h5>
+              <span class="text-decoration-line-through text-muted">₹199</span>
+              <span class="ms-auto text-success small fw-bold">45% off</span>
+            </div>
+            <a href="#" class="btn btn-warning w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#productModal1">Explore Product</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+        
+<!-- _______________________________________________________ customization _____________________________________________________________________________ -->
+<div class="container py-5">
+  <div class="customization-section">
+    <div class="row align-items-center">
+      <!-- Text Section -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold text-center text-lg-start mb-3">Your Style, Your Way</h2>
+        <h4 class="fw-bold text-center text-lg-start mb-3">Customized Solutions for Every Vision</h4>
+        <p>
+          At <strong>Elarchitek</strong>, we believe every maker has a <strong>unique vision</strong>.
+          That’s why we offer <strong>customized product options</strong> to match your exact needs — 
+          from packaging styles to product dimensions and colors. Whether you're working on a creative prototype or a 
+          <strong>large-scale build</strong>, we’ve got your back.
+        </p>
+        <p>
+          No matter the scale or complexity of your project, our dedicated team is here to help turn your 
+          <strong>ideas into reality</strong>. We understand that the <strong>smallest detail</strong> can make a 
+          <strong>significant difference</strong>, so we work closely with you to ensure that every element is 
+          perfectly <strong>tailored</strong> to your requirements.
+        </p>
+        <div class="contact-list">
+          <h5 class="fw-bold">Contact US</h5>
+          <ul class="list-unstyled">
+            <li>📧 <a href="mailto:info@elarchitek@gmail.com">info@elarchitek@gmail.com</a></li>
+            <li class="blue">📞 +91 123456678</li>
+            <li>🔗 <a href="#">Elarchi_tek</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-lg-6 text-center">
+        <img src="/images/MakerHub-Images/products/ChatGPT_Image_Apr_29__2025__10_08_35_PM-removebg-preview 2.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scrolling Text Section -->
+<div class="scrolling-text-section">
+  <div class="scrolling-container">
+    <div class="scrolling-text">
+      <span class="text-item">
+        <i class="fas fa-drafting-compass"></i> Design
+      </span>
+      <span class="text-item">
+        <i class="fas fa-flask"></i> Test
+      </span>
+      <span class="text-item">
+        <i class="fas fa-graduation-cap"></i> Learn
+      </span>
+      <span class="set-separator"></span>
+      <span class="text-item">
+        <i class="fas fa-drafting-compass"></i> Design
+      </span>
+      <span class="text-item">
+        <i class="fas fa-flask"></i> Test
+      </span>
+      <span class="text-item">
+        <i class="fas fa-graduation-cap"></i> Learn
+      </span>
+      <span class="set-separator"></span>
+      <span class="text-item">
+        <i class="fas fa-drafting-compass"></i> Design
+      </span>
+      <span class="text-item">
+        <i class="fas fa-flask"></i> Test
+      </span>
+      <span class="text-item">
+        <i class="fas fa-graduation-cap"></i> Learn
+      </span>
+    </div>
+  </div>
+</div>
+<!-- Keep your full code same, just replace Explore Product button with modal trigger and add modal code at bottom -->
+
+<!-- Example Product Card 1 -->
+
+<!-- Repeat same data-bs-target="#productModalX" for each card if you want different modals -->
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content product-modal">
+      <div class="modal-header product-modal-header">
+        <div>
+          <h4 class="modal-title fw-bold mb-1" id="productModal1Label">3D Printed Personalized Mini Bust</h4>
+          <p class="text-muted mb-0">Elarchitek Premium Collection</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body product-modal-body">
+        <div class="row g-4">
+          <!-- Left: Images -->
+          <div class="col-lg-6">
+            <div class="product-image-container">
+              <img src="/images/MakerHub-Images/products/amma-flip.png" class="img-fluid product-main-image" alt="Product">
+            </div>
+            <div class="product-thumbnails">
+              <img src="/images/MakerHub-Images/products/amma-flip.png" class="product-thumb active" alt="thumb">
+              <img src="/images/MakerHub-Images/products/amma-flip.png" class="product-thumb" alt="thumb">
+              <img src="/images/MakerHub-Images/products/amma-flip.png" class="product-thumb" alt="thumb">
+              <img src="/images/MakerHub-Images/products/amma-flip.png" class="product-thumb" alt="thumb">
+            </div>
+          </div>
+
+          <!-- Right: Details -->
+          <div class="col-lg-6">
+            <div class="product-details">
+              <div class="product-badge">Special Offer</div>
+              <div class="product-price">
+                <span class="current-price">₹209</span>
+                <span class="original-price">₹499</span>
+                <span class="discount-badge">45% OFF</span>
+              </div>
+              
+              <div class="product-actions">
+                <button class="btn-buy-now">Buy Now <i class="fas fa-bolt"></i></button>
+                <button class="btn-add-cart">Add to Cart</button>
+              </div>
+
+              <div class="product-features">
+                <h6>Product Features</h6>
+                <div class="feature-list">
+                  <div class="feature-item"><i class="fas fa-leaf"></i> Eco-friendly PLA Material</div>
+                  <div class="feature-item"><i class="fas fa-palette"></i> Customizable Design</div>
+                  <div class="feature-item"><i class="fas fa-ruler"></i> 10cm Height</div>
+                  <div class="feature-item"><i class="fas fa-shield-alt"></i> Quality Guaranteed</div>
+                </div>
+              </div>
+
+              <div class="product-rating">
+                <div class="rating-stars">
+                  <span class="rating-number">4.8</span>
+                  <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-count">(1,058 reviews)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- __________________________________________footer_____________________________________________________________________________ -->
+  <footer>
+    <div class="footer-main">
+      <!-- Logo -->
+      <div class="footer-col">
+        <img src="../images/new-logo.png" alt="Elarchitek Logo" class="footer-logo" />
+      </div>
+
+      <!-- Column 1 -->
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="../index.html">Home</a>
+        <a href="../Kits/robotickits.html">Robotic Kit</a>
+        <a href="../Kits/computerKits.html">Computer Kit</a>
+        <a href="../Kits/stemkits.html">STEM Kit</a>
+      </div>
+
+      <!-- Vertical Divider -->
+      <div class="divider"></div>
+
+      <!-- Column 2 -->
+      <div class="footer-col">
+        <h4>Workshops</h4>
+        <a href="makerhub.html">3D Printing</a>
+        <a href="../Work-Shop/Roboticmastery.html">Robotic Workshop</a>
+        <a href="../Work-Shop/">Computer Workshop</a>
+        <a href="../stem.html">STEM Workshop</a>
+      </div>
+
+      <!-- Vertical Divider -->
+      <div class="divider"></div>
+
+      <!-- Column 3 -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="../3d_printing_mastery.html">3D Printing Workshop</a>
+        <a href="makerhub.html">Learning Center</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
+      </div>
+
+
+      <!-- Vertical Divider -->
+      <div class="divider"></div>
+
+      <!-- Contact Info -->
+      <div class="footer-col contact-info">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
+        <p><i class="fas fa-phone"></i> +91-1234567890</p>
+        <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider" />
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <p>Terms-and-conditions</p>
+        <p>Privacy-policy</p>
+      </div>
+      <div class="footer-social">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Elarchitek. All rights reserved. Empowering Innovation Through Electronics.</p>
+  </footer>
+
+
+<!-- __________________________________________________script_______________________________________________________________________________ -->
+            <script>
+                document.getElementById("workshopAccordion").style.backgroundColor = "white";
+                document.querySelectorAll('.accordion-button').forEach((btn, index) => {
+                    const body = btn.closest('.accordion-item').querySelector('.accordion-collapse');
+                    btn.addEventListener('click', function () {
+                        const isOpen = body.classList.contains('show');
+        
+                        // Close all
+                        document.querySelectorAll('.accordion-collapse').forEach(c => c.classList.remove('show'));
+                        document.querySelectorAll('.accordion-button').forEach(b => b.classList.add('collapsed'));
+        
+                        // Toggle this
+                        if (!isOpen) {
+                            body.classList.add('show');
+                            btn.classList.remove('collapsed');
+                        }
+                    });
+        
+                });
+            </script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+      
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+/* Professional Internship Page Styling */
+
+/* Internship Opportunities Cards */
+.feature-card {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  box-shadow: 0 8px 30px rgba(0, 33, 75, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4, #010510);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 188, 212, 0.2);
+}
+
+.feature-card .card-img-top {
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.feature-card .card-body {
+  padding: 2rem 1.5rem;
+}
+
+.feature-card .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.feature-card .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #00bcd4;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.feature-card:hover .card-title::after {
+  width: 80px;
+}
+
+.feature-card .card-text {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Certificate Section */
+.certificate-card {
+  background: linear-gradient(135deg, #010510 0%, #00214b 100%);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 33, 75, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.certificate-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00bcd4, #010510, #00bcd4, #010510);
+  background-size: 400% 400%;
+  border-radius: 27px;
+  z-index: -1;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 188, 212, 0.6);
+}
+
+.certificate-card .card-body {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.certificate-card .fa-award {
+  color: #00bcd4;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 188, 212, 0.3));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.certificate-card .card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.certificate-card .card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.benefits-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4, #010510, #00bcd4);
+}
+
+.benefit-card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.05), rgba(1, 5, 16, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.benefit-card:hover::before {
+  opacity: 1;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 188, 212, 0.15);
+}
+
+.benefit-card .card-body {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.benefit-card .fas {
+  color: #00bcd4;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 188, 212, 0.2));
+}
+
+.benefit-card:hover .fas {
+  transform: scale(1.1) rotate(5deg);
+  color: #010510;
+}
+
+.benefit-card .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.benefit-card .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #00bcd4;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.benefit-card:hover .card-title::after {
+  width: 80px;
+}
+
+.benefit-card .card-text {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .feature-card .card-img-top {
+    height: 180px;
+    padding: 15px;
+  }
+  
+  .feature-card .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .certificate-card .card-body {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .benefit-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-card .card-img-top {
+    height: 160px;
+    padding: 12px;
+  }
+  
+  .feature-card .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .feature-card .card-text {
+    font-size: 0.95rem;
+  }
+  
+  .certificate-card .card-title {
+    font-size: 1.6rem;
+  }
+  
+  .certificate-card .card-text {
+    font-size: 1rem;
+  }
+  
+  .benefit-card .card-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    margin-bottom: 2rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .feature-card .card-img-top {
+    height: 140px;
+    padding: 10px;
+  }
+  
+  .feature-card .card-body {
+    padding: 1.5rem 1rem;
+  }
+  
+  .feature-card .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .certificate-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+  
+  .certificate-card .fa-award {
+    font-size: 3rem;
+  }
+  
+  .certificate-card .card-title {
+    font-size: 1.4rem;
+  }
+  
+  .certificate-card .card-text {
+    font-size: 0.95rem;
+  }
+  
+  .benefit-card {
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .benefit-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+  
+  .benefit-card .fas {
+    font-size: 2.5rem;
+  }
+  
+  .benefit-card .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .benefit-card .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-card {
+    max-width: 350px;
+  }
+  
+  .feature-card .card-img-top {
+    height: 120px;
+    padding: 8px;
+  }
+  
+  .feature-card .card-body {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .feature-card .card-title {
+    font-size: 1rem;
+  }
+  
+  .feature-card .card-text {
+    font-size: 0.85rem;
+  }
+  
+  .certificate-card .card-body {
+    padding: 1.5rem 1rem;
+  }
+  
+  .certificate-card .fa-award {
+    font-size: 2.5rem;
+  }
+  
+  .certificate-card .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .certificate-card .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .benefit-card {
+    max-width: 350px;
+  }
+  
+  .benefit-card .card-body {
+    padding: 1.5rem 1rem;
+  }
+  
+  .benefit-card .fas {
+    font-size: 2rem;
+  }
+  
+  .benefit-card .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .benefit-card .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card,
+  .benefit-card {
+    max-width: 320px;
+  }
+  
+  .feature-card .card-img-top {
+    height: 100px;
+    padding: 5px;
+  }
+  
+  .feature-card .card-body,
+  .benefit-card .card-body {
+    padding: 1rem 0.8rem;
+  }
+  
+  .feature-card .card-title,
+  .benefit-card .card-title {
+    font-size: 0.95rem;
+  }
+  
+  .feature-card .card-text,
+  .benefit-card .card-text {
+    font-size: 0.8rem;
+  }
+  
+  .certificate-card .card-body {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .certificate-card .fa-award {
+    font-size: 2rem;
+  }
+  
+  .certificate-card .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .certificate-card .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .feature-card,
+  .benefit-card {
+    max-width: 300px;
+  }
+  
+  .feature-card .card-img-top {
+    height: 90px;
+  }
+  
+  .feature-card .card-body,
+  .benefit-card .card-body,
+  .certificate-card .card-body {
+    padding: 1rem 0.6rem;
+  }
+  
+  .feature-card .card-title,
+  .benefit-card .card-title,
+  .certificate-card .card-title {
+    font-size: 0.9rem;
+  }
+  
+  .feature-card .card-text,
+  .benefit-card .card-text,
+  .certificate-card .card-text {
+    font-size: 0.75rem;
+  }
+  
+  .certificate-card .fa-award {
+    font-size: 1.8rem;
+  }
+  
+  .benefit-card .fas {
+    font-size: 1.8rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1400px) {
+  .feature-card .card-img-top {
+    height: 220px;
+    padding: 25px;
+  }
+  
+  .feature-card .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .feature-card .card-text {
+    font-size: 1.1rem;
+  }
+  
+  .certificate-card .card-body {
+    padding: 3.5rem 2.5rem;
+  }
+  
+  .certificate-card .card-title {
+    font-size: 2rem;
+  }
+  
+  .certificate-card .card-text {
+    font-size: 1.2rem;
+  }
+  
+  .benefit-card .card-body {
+    padding: 3rem 2.5rem;
+  }
+  
+  .benefit-card .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .benefit-card .card-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .feature-card .card-img-top {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .certificate-card,
+  .benefit-card {
+    transition: none;
+  }
+  
+  .certificate-card::before {
+    animation: none;
+  }
+  
+  .certificate-card .fa-award {
+    animation: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .feature-card,
+  .certificate-card,
+  .benefit-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .certificate-card {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .certificate-card .card-body {
+    color: black !important;
+  }
+}

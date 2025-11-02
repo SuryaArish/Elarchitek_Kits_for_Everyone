@@ -1,0 +1,646 @@
+/* ===========================================
+   PROFESSIONAL WORKSHOP STYLES
+   =========================================== */
+
+/* Base Styles */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.25rem; }
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 32, 44, 0.8) 0%, rgba(45, 55, 72, 0.6) 100%);
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-align: left;
+  padding: 3rem;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+}
+
+.hero-text p {
+  margin: 0;
+  line-height: 1;
+  color: #ffffff !important;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.hero-text em {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 0.9;
+}
+
+.carousel-caption h4 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.carousel-caption p {
+  color: #4a5568;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Professional Button */
+.btn-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+.btn-info:hover::before {
+  left: 100%;
+}
+
+.btn-info:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+  color: white !important;
+}
+
+/* Pricing & Mentor Section */
+.section-sm {
+  padding: 5rem 0;
+}
+
+.pricing-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.price-original {
+  font-size: 1.5rem;
+  color: #a0aec0;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.price-current {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.discount-badge {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+}
+
+/* Mentor Card */
+.mentor-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.mentor-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-right: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.badge-dark {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Learning Section */
+.section {
+  padding: 6rem 0;
+}
+
+.section-header {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Accordion */
+.accordion-button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a202c;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: none;
+  padding: 1.5rem 2rem;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+}
+
+.accordion-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 0 0 16px 16px;
+}
+
+.accordion-item {
+  border: none;
+  border-radius: 16px !important;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Workshop Details Card */
+.workshop-details-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  border: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.workshop-details-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.workshop-details-card .card-body {
+  padding: 3rem;
+}
+
+.workshop-details-card .card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.workshop-details-card .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.workshop-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.workshop-detail-item:last-child {
+  border-bottom: none;
+}
+
+.workshop-detail-item i {
+  font-size: 1.3rem;
+  color: #667eea;
+  margin-right: 1rem;
+}
+
+.workshop-detail-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  text-align: right;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+/* Certificate Section */
+.certificate-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.certificate-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.certificate-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.certificate-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #4a5568;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.certificate-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.certificate-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 6rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.skills-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.skills-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.skills-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.skills-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.skills-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.skills-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.skills-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.skills-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-caption {
+    position: static;
+    transform: none;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  
+  .skills-item {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .skills-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .hero-text em {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .carousel-caption {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .hero-text {
+    padding: 1.5rem;
+  }
+  
+  .hero-text em {
+    font-size: 2rem;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  
+  .section-header {
+    font-size: 2.5rem;
+  }
+  
+  .certificate-title {
+    font-size: 2.5rem;
+  }
+  
+  .skills-content h2 {
+    font-size: 2rem;
+  }
+  
+  .mentor-card,
+  .pricing-section,
+  .workshop-details-card .card-body {
+    padding: 2rem;
+  }
+  
+  .skills-item {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .certificate-section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .carousel-caption {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .hero-text em {
+    font-size: 1.5rem;
+  }
+  
+  .section-header {
+    font-size: 2rem;
+  }
+  
+  .certificate-title {
+    font-size: 2rem;
+  }
+  
+  .skills-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mentor-card,
+  .pricing-section,
+  .workshop-details-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .price-current {
+    font-size: 2rem;
+  }
+  
+  .mentor-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+  }
+}

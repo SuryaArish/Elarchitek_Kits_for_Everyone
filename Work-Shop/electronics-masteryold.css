@@ -1,0 +1,461 @@
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+  padding: 0;
+  min-height: 70vh;
+}
+
+.hero-content {
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text-content {
+  max-width: 500px;
+}
+
+.nav-indicator {
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.join-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.pricing-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1rem;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.discount {
+  background: #4caf50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-image {
+  padding: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+  padding: 60px 0;
+  background: white;
+}
+
+/* Why Attend Section */
+.why-attend-section {
+  margin-bottom: 50px;
+  padding: 0 40px;
+}
+
+.why-attend-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.why-attend-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Learn Section */
+.learn-section {
+  margin-bottom: 50px;
+  padding: 0 40px;
+}
+
+.learn-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.learn-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.learn-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn-item:hover {
+  background: #f5f5f5;
+  border-color: #4caf50;
+}
+
+.learn-item i {
+  color: #4caf50;
+  font-size: 1.2rem;
+}
+
+.learn-item span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Certificate Section */
+.certificate-section {
+  margin-bottom: 50px;
+  padding: 60px 40px;
+  background: #f8f9fa;
+}
+
+.certificate-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.certificate-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certificate-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-card {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  padding: 80px 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.certificate-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 60px 40px;
+  background: white;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.skill-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.skill-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.skill-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.skill-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill-image {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-image img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  padding: 40px 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.instructor-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-badge {
+  background: #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.instructor-info h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.instructor-info p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.workshop-details {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.workshop-details h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.detail-item i {
+  color: #4caf50;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.detail-item div strong {
+  display: block;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.detail-item div span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.register-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.register-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Scrolling Text Section */
+.scrolling-text-section {
+  padding: 15px 0;
+  background: linear-gradient(135deg, #010510 0%, #00214b 100%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-text {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  gap: 150px;
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.text-item i {
+  font-size: 1.5rem;
+  color: #4caf50;
+}
+
+.set-separator {
+  width: 200px;
+  height: 1px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content {
+    padding: 40px 20px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .skill-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .skill-item.reverse {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    margin-top: 40px;
+    position: static;
+  }
+  
+  .why-attend-section,
+  .learn-section {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+  }
+  
+  .hero-image img {
+    height: 50vh;
+  }
+  
+  .pricing-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .certificate-card {
+    padding: 60px 20px;
+  }
+  
+  .certificate-card h3 {
+    font-size: 1.5rem;
+  }
+}

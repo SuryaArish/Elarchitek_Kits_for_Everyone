@@ -1,0 +1,107 @@
+/* General */
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url("assets/img/hero-bg.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+.hero-section h1 {
+  font-size: 3rem;
+}
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+/* Section Titles */
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+.section-title p {
+  color: #666;
+}
+
+/* Features */
+.feature-card {
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Testimonials */
+.testimonial {
+  transition: transform .3s ease;
+}
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+.btn-float {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  background: #fff;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all .3s ease;
+}
+.btn-float i {
+  font-size: 1.4rem;
+}
+.btn-float span {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+  white-space: nowrap;
+}
+.btn-float:hover {
+  padding-right: 24px;
+}
+.btn-float:hover span {
+  opacity: 1;
+  max-width: 200px;
+}
+.btn-float.whatsapp {
+  color: #25d366;
+}
+.btn-float.email {
+  color: #0072c6;
+}

@@ -13,6 +13,8 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="workshop-styles.css">
+  <link rel="stylesheet" href="enhanced-sections.css">
 </head>
 <body>
 
@@ -42,14 +44,14 @@
   <!-- _____________________________________________ hero section ________________________________________________________ -->
   <!-- Floating Buttons -->
   <div class="floating-buttons">
-    <a href="Work-Shop/workshop.html" class="floating-btn">
+    <a href="Work-Shop/workshop-home.html" class="floating-btn">
       <img src="./images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
       <span>WORKSHOP</span>
     </a>
   </div>
 
   <div class="floating-buttons2">
-    <a href="makerhub_product.html" class="floating-btn2">
+    <a href="Maker-Hub/makerhub_product.html" class="floating-btn2">
       <img src="./images/icons_for_floating_button/Group 329-1.png" alt="Workshop Icon" class="icon-flot" />
       <span>PRODUCTS</span>
     </a>
@@ -109,7 +111,7 @@
             At elarchitek, we believe in teaching through understanding and practical application.
             Our educational kits make <strong>STEM concepts</strong> accessible and engaging for all learners.
           </p>
-          <a href="#" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
+          <a href="Kits/kits-home.html" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
         </div>
       </div>
 
@@ -126,7 +128,7 @@
             Our advanced kits inspire students to solve real-world problems while mastering critical STEM skills.
             Dive deeper into hands-on exploration with every kit.
           </p>
-          <a href="#" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
+          <a href="Kits/kits-home.html" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
         </div>
       </div>
 
@@ -144,7 +146,7 @@
             With hands-on STEM kits, learners of all levels develop real-world skills in a fun and engaging way.
             Discover your potential today.
           </p>
-          <a href="#" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
+          <a href="Kits/kits-home.html" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
         </div>
       </div>
 
@@ -162,7 +164,7 @@
             With hands-on STEM kits, learners of all levels develop real-world skills in a fun and engaging way.
             Discover your potential today.
           </p>
-          <a href="#" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
+          <a href="Kits/kits-home.html" class="btn btn-info text-black fw-bold">Explore Our Kits</a>
         </div>
       </div>
 
@@ -170,7 +172,7 @@
   </div>
 
   <!-- About Section -->
-  <section class="py-4 text-center">
+  <section class="py-3 text-center">
     <div class="container">
       <h2><strong>About ELARCHITEK !</strong></h2>
       <p class=" intro-text container text-muted">
@@ -179,233 +181,151 @@
         At elarchitek, we believe in teaching through understanding and practical application. Our educational kits make
         STEM concepts accessible and engaging for all learners.
       </p>
-      <a href="#" class="btn btn-info text-black fw-bold">Learn More</a>
+      <a href="aboutus.html" class="btn btn-info text-black fw-bold">Learn More</a>
     </div>
   </section>
 
   <!-- Kits Section -->
-  <section class="">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-
-        <!-- Left Box -->
-        <div class="col-md-6 mb-4 mb-md-0">
-          <!-- <div class="blue-box rounded-3"></div> -->
-          <img src="./images/home_body_images/ChatGPT Image Jun 22, 2025, 10_19_00 PM 2.png" alt="Kits"
-            class="img-about img-fluid rounded-3" />
-        </div>
-
-        <!-- Right Content -->
-        <div class="col-md-6 mb-4 p-5">
-          <h3 id="browse-kits-head"><strong>Browse Our Kits !</strong></h3>
-
-          <div class="mb-3">
-            <p><strong>ELARCHIPHY 1.0</strong><br />
-              <span class="text-muted">A beginner-friendly kit to explore basic electronics through 10 practical,
-                hands-on circuits.</span>
-            </p>
-            <p><strong>ELARCHICOM 1.0</strong><br />
-              <span class="text-muted">Learn digital logic and computer fundamentals by building circuits that mimic
-                real-world data processing.</span>
-            </p>
-            <p><strong>ELARCHIBOT</strong><br />
-              <span class="text-muted">A robotics starter kit to build light-sensing, path-following, and
-                decision-making robots while learning about sensors and controllers.</span>
-            </p>
+  <section class="py-4 kits-showcase">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold whatmakes-head">Browse Our Kits !</h2>
+        <p class="lead text-muted">Discover our comprehensive STEM learning kits designed for hands-on exploration</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Kit Card 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="kit-showcase-card h-100">
+            <div class="kit-showcase-icon">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <h5>Electronic Kits</h5>
+            <p>Learn basic electronics through hands-on circuit building.</p>
+            <a href="Kits/electronickits.html" class="kit-showcase-btn">Explore</a>
           </div>
-          <a href="#" class="Ex-Button btn btn-info text-black fw-bold">Explore</a>
+        </div>
+        
+        <!-- Kit Card 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="kit-showcase-card h-100">
+            <div class="kit-showcase-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h5>Computer Kits</h5>
+            <p>Explore digital logic and computer fundamentals.</p>
+            <a href="Kits/computerKits.html" class="kit-showcase-btn">Explore</a>
+          </div>
+        </div>
+        
+        <!-- Kit Card 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="kit-showcase-card h-100">
+            <div class="kit-showcase-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h5>Robotic Kits</h5>
+            <p>Build intelligent robots with sensors and controllers.</p>
+            <a href="Kits/robotickits.html" class="kit-showcase-btn">Explore</a>
+          </div>
+        </div>
+        
+        <!-- Kit Card 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="kit-showcase-card h-100">
+            <div class="kit-showcase-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h5>Learning Kits</h5>
+            <p>STEM education through science and math experiments.</p>
+            <a href="Kits/stemkits.html" class="kit-showcase-btn">Explore</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- ________________________________________________Work shop start___________________________________________________ -->
 
-  <div class="container" id="workshop-section">
-    <div class="row">
-      <!-- Left Column: Accordion -->
-      <div class="col-md-6">
-
-        <h2 class="text-center fw-bold pb-4 mb-5 mt-5">Our Workshop</h2>
-        <div class="accordion" id="workshopAccordion">
-
-          <!-- Workshop Item 1 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false">
-                3D Printing
-              </button>
-
-            </h2>
-            <div class="accordion-collapse collapse">
-              <div class="accordion-body dropdown-card">
-
-                <h5 class="fw-bold text-center">Introduction to 3D Printing</h5>
-                <p class="dropdown-content">3D Printing & Modelling Workshop
-                  Join Elarchitek’s hands-on workshop and explore the complete journey from digital design to physical
-                  creation.
-                  Learn the basics of 3D modelling using tools like Tinkercad and Fusion 360, and discover how to
-                  prepare, slice, and print your models using FDM 3D printers.
-
-                  Workshop Highlights:
-
-                  Design your own 3D models
-
-                  Understand the working of 3D printers
-
-                  Learn slicing, printing, and troubleshooting techniques
-
-                  Perfect for students, makers, and beginners looking to build real-world skills in 3D design
-                  and fabrication.
-                </p>
-                <p class="fst-italic text-muted">Want to learn more? Click the ‘View More’ button to discover full
-                  details!</p>
-                <a href="3d_printing_mastery.html">
-                  <button class="btn btn-viewmore">View More</button>
-                </a>
+  <section class="py-4 workshop-section" id="workshop-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column - Workshop Cards -->
+        <div class="col-12">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold whatmakes-head">Our Workshop</h2>
+            <p class="lead text-muted">Hands-on learning experiences that transform ideas into reality</p>
+          </div>
+          <div class="row g-4">
+            
+            <!-- Workshop Card 1 -->
+            <div class="col-md-6">
+              <div class="workshop-card h-100">
+                <div class="workshop-icon">
+                  <i class="fas fa-cube"></i>
+                </div>
+                <h4>3D Printing</h4>
+                <p>Master digital design to physical creation with hands-on 3D modeling and printing techniques.</p>
+                <a href="Work-Shop/3d_printing_mastery.html" class="workshop-btn">Learn More <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-          </div>
 
-          <!-- Workshop Item 2 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false">
-                Electronic Mastery
-              </button>
-            </h2>
-            <div class="accordion-collapse collapse">
-              <div class="accordion-body dropdown-card">
-
-                <h5 class="fw-bold text-center">Introduction to Electronics Mastery</h5>
-                <p class="dropdown-content">
-                  Electronics Mastery Workshop
-                  Dive into the world of practical electronics with Elarchitek’s Electronics Mastery Workshop.
-                  This hands-on program is designed to help learners understand and build real-time electronic circuits
-                  from the ground up.
-
-                  Workshop Highlights:
-
-                  Learn the fundamentals of circuits, sensors, and components
-
-                  Build and test practical electronics projects
-
-                  Develop problem-solving and debugging skills
-
-                  Ideal for beginners, students, and hobbyists eager to gain core knowledge in electronics and explore
-                  how modern systems work.
-                </p>
-                <p class="fst-italic text-muted">
-                  Want to learn more? Click the ‘View More’ button to discover full details!
-                </p>
-                <a href="Work-Shop/electronic_mastery.html">
-                  <button class="btn btn-viewmore">View More</button>
-                </a>
+            <!-- Workshop Card 2 -->
+            <div class="col-md-6">
+              <div class="workshop-card h-100">
+                <div class="workshop-icon">
+                  <i class="fas fa-microchip"></i>
+                </div>
+                <h4>Electronics Mastery</h4>
+                <p>Build real-time electronic circuits and develop problem-solving skills in practical electronics.</p>
+                <a href="Work-Shop/electronicmastery.html" class="workshop-btn">Learn More <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-          </div>
 
-          <!-- Workshop Item 3 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false">
-                Robotic Mastery
-              </button>
-            </h2>
-            <div class="accordion-collapse collapse">
-              <div class="accordion-body dropdown-card">
-
-                <h5 class="fw-bold text-center">Introduction to Robotic Mastery</h5>
-                <p class="dropdown-content">
-                  Robotics Mastery Workshop
-                  Explore the future of technology with Elarchitek’s Robotics Mastery Workshop.
-                  This hands-on program empowers participants to build, program, and control robots while understanding
-                  the core concepts behind intelligent machines.
-
-                  Workshop Highlights:
-
-                  Build robots like line followers, obstacle avoiders, and light seekers
-
-                  Learn about sensors, motor drivers, and microcontrollers
-
-                  Gain experience in logic building and basic automation
-
-                  Perfect for students and enthusiasts who want to develop a strong foundation in robotics through
-                  practical learning and real-world applications.
-                </p>
-                <p class="fst-italic text-muted">Want to learn more? Click the ‘View More’ button to discover full
-                  details!</p>
-                <a href="Work-Shop/Roboticmastery.html">
-                  <button class="btn btn-viewmore">View More</button>
-                </a>
-
+            <!-- Workshop Card 3 -->
+            <div class="col-md-6">
+              <div class="workshop-card h-100">
+                <div class="workshop-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <h4>Robotics Mastery</h4>
+                <p>Build, program, and control intelligent robots while learning sensors and automation concepts.</p>
+                <a href="Work-Shop/Roboticmastery.html" class="workshop-btn">Learn More <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-          </div>
 
-          <!-- Workshop Item 4 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false">
-                Stem Workshop
-              </button>
-            </h2>
-            <div class="accordion-collapse collapse">
-              <div class="accordion-body dropdown-card">
-
-                <h5 class="fw-bold text-center">Introduction to STEM Workshop</h5>
-                <p class="dropdown-content">
-                  STEM Mastery Workshop
-                  Unlock creativity and critical thinking with Elarchitek’s STEM Mastery Workshop.
-                  Designed to blend Science, Technology, Engineering, and Mathematics, this hands-on experience helps
-                  learners connect concepts with real-world applications.
-
-                  Workshop Highlights:
-
-                  Explore basic electronics, circuits, and sensors
-
-                  Engage in fun, practical experiments and problem-solving tasks
-
-                  Strengthen curiosity, teamwork, and innovation skills
-
-                  Ideal for school students and curious minds ready to dive into the exciting world of STEM learning
-                  through doing.
-                </p>
-                <p class="fst-italic text-muted">Want to learn more? Click the ‘View More’ button to discover full
-                  details!</p>
-                <a href="Work-Shop/workshop.html">
-                  <button class="btn btn-viewmore">View More</button>
-                </a>
-
+            <!-- Workshop Card 4 -->
+            <div class="col-md-6">
+              <div class="workshop-card h-100">
+                <div class="workshop-icon">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <h4>STEM Workshop</h4>
+                <p>Blend Science, Technology, Engineering, and Mathematics through hands-on experiments and innovation.</p>
+                <a href="Work-Shop/stem.html" class="workshop-btn">Learn More <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
-      <!-- Right Column -->
-      <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
-        <img src="./images/home_body_images/9837495.png" alt="Workshop Image"
-          class="img-fluid rounded-3 workshop-img-explore " />
+
 
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ________________________________________________Work shop end___________________________________________________ -->
 
-  <section class=" ">
+  <section class="py-4">
     <div class="container">
-      <h2 class="text-center mb-5 fw-bold whatmakes-head ">What Makes Elarchitek Unique ?
+      <h2 class="text-center mb-4 fw-bold whatmakes-head ">What Makes Elarchitek Unique ?
       </h2>
       <div class="row">
         <!-- Card 1 -->
         <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
           <div class="card feature-card">
-            <img src="./images/Elarchitek card/card1.png" class="card-img-top" alt="Hands on Learning">
+            <div class="card-icon">
+              <i class="fas fa-hands"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Hands on Learning</h5>
               <p class="card-text">Elarchitek kits offer practical, build-it-yourself projects that turn theory into
@@ -419,7 +339,9 @@
         <!-- Card 2 -->
         <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
           <div class="card feature-card">
-            <img src="./images/Elarchitek card/card2.png" class="card-img-top" alt="Step by Step Guidance">
+            <div class="card-icon">
+              <i class="fas fa-route"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Step-by-Step Guidance</h5>
               <p class="card-text">Every kit includes clear, beginner-friendly instructions that guide you from start to
@@ -433,7 +355,9 @@
         <!-- Card 3 -->
         <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
           <div class="card feature-card">
-            <img src="./images/Elarchitek card/card3.png" class="card-img-top" alt="Aligned Content">
+            <div class="card-icon">
+              <i class="fas fa-align-center"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title"> Aligned Learning</h5>
               <p class="card-text">Elarchitek’s activities are designed to match academic standards, making them perfect
@@ -446,7 +370,9 @@
         <!-- Card 4 -->
         <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
           <div class="card feature-card">
-            <img src="./images/Elarchitek card/card4.png" class="card-img-top" alt="Students & Makers">
+            <div class="card-icon">
+              <i class="fas fa-users"></i>
+            </div>
             <div class="card-body">
               <h5 class="card-title">For Makers & Learners</h5>
               <p class="card-text">Whether you’re a curious student or an enthusiastic hobbyist, Elarchitek helps
@@ -463,7 +389,7 @@
   <!-- ______________________________________________expert edge_________________________________________________________________ -->
 
   <!-- Kits Section -->
-  <section class="py-5">
+  <section class="py-4">
     <div class="container">
       <div class="row align-items-center">
 
@@ -484,7 +410,7 @@
             </p>
           </div>
 
-          <a href="#" class="Ex-Button btn btn-info text-black fw-bold">Explore</a>
+          <a href="aboutus.html" class="Ex-Button btn btn-info text-black fw-bold">Explore</a>
         </div>
       </div>
     </div>
@@ -540,7 +466,7 @@
         <h4>Products</h4>
         <a href="index.html">Home</a>
         <a href="Kits/robotickits.html">Robotic Kit</a>
-        <a href="Kits/">Computer Kit</a>
+        <a href="Kits/computerKits.html">Computer Kit</a>
         <a href="Kits/stemkits.html">STEM Kit</a>
       </div>
 
@@ -552,8 +478,8 @@
         <h4>Workshops</h4>
         <a href="Maker-Hub/makerhub.html">3D Printing</a>
         <a href="Work-Shop/Roboticmastery.html">Robotic Workshop</a>
-        <a href="Work-Shop/">Computer Workshop</a>
-        <a href="stem.html">STEM Workshop</a>
+        <a href="Work-Shop/electronicmastery.html">Electronic Workshop</a>
+        <a href="Work-Shop/stem.html">STEM Workshop</a>
       </div>
 
       <!-- Vertical Divider -->
@@ -562,8 +488,8 @@
       <!-- Column 3 -->
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="3d_printing_mastery.html">3D Printing Workshop</a>
-        <a href="makerhub.html">Learning Center</a>
+        <a href="Work-Shop/3d_printing_mastery.html">3D Printing Workshop</a>
+        <a href="mentoring.html">Learning Center</a>
         <a href="aboutus.html">About Us</a>
         <a href="contactus.html">Contact Us</a>
       </div>

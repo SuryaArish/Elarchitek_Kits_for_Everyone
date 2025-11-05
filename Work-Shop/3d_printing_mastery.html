@@ -2,601 +2,1395 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3d_printing_mastery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="3d_printing_mastery.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Printing Mastery Workshop - Elarchitek</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="electronicmastery.css">
+  <style>
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300bcd4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* Workshop Cards - Scrollable */
+    .workshop-section {
+      overflow-x: auto;
+      padding: 2rem 0;
+    }
+
+    .workshop-grid {
+      display: flex;
+      gap: 2rem;
+      padding: 0 2rem;
+      min-width: max-content;
+    }
+
+    .workshop-card {
+      background: white;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      width: 280px;
+      flex-shrink: 0;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .workshop-card::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, #00bcd4, #010510, #00bcd4);
+      border-radius: 25px;
+      z-index: -1;
+    }
+
+    .workshop-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 188, 212, 0.2);
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+    }
+
+    .workshop-card:hover .workshop-title {
+      color: white !important;
+      font-weight: 800 !important;
+    }
+
+    .workshop-card:hover .workshop-description {
+      color: white !important;
+      font-weight: 600 !important;
+    }
+
+    .workshop-card:hover .workshop-features li {
+      color: white !important;
+      font-weight: 600 !important;
+    }
+
+    .workshop-card:hover .workshop-duration {
+      color: white !important;
+      font-weight: 600 !important;
+    }
+
+    .workshop-card:hover .workshop-level {
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: white !important;
+      font-weight: 700 !important;
+    }
+
+    .workshop-card.featured {
+      transform: scale(1.08);
+      border-color: #00bcd4;
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+    }
+
+    .workshop-card.featured .workshop-title,
+    .workshop-card.featured .workshop-description,
+    .workshop-card.featured .workshop-features li,
+    .workshop-card.featured .workshop-duration {
+      color: white;
+    }
+
+    .workshop-card.featured .workshop-level {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .workshop-card.featured .workshop-features li::before {
+      color: white;
+    }
+
+    .workshop-card.featured::after {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(45deg, #00bcd4, #0097a7);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+    }
+
+    .workshop-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem auto 1.5rem;
+      font-size: 2rem;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+    }
+
+    .workshop-card.featured .workshop-icon {
+      background: linear-gradient(135deg, #010510, #00214b);
+    }
+
+    .workshop-content {
+      padding: 0 2rem 2rem;
+      text-align: center;
+    }
+
+    .workshop-level {
+      background: rgba(0, 188, 212, 0.1);
+      color: #00bcd4;
+      padding: 0.3rem 1rem;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .workshop-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .workshop-duration {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .workshop-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #00bcd4;
+      margin-bottom: 1.5rem;
+    }
+
+    .workshop-description {
+      color: #34495e;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .workshop-features {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+      text-align: left;
+    }
+
+    .workshop-features li {
+      padding: 0.4rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+      color: #2c3e50;
+      font-size: 0.85rem;
+    }
+
+    .workshop-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    /* Module Cards - Grid Style */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .module-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      border-left: 5px solid #00bcd4;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), transparent);
+      border-radius: 0 0 0 100px;
+    }
+
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 188, 212, 0.15);
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .module-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+    }
+
+    .module-icon i {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .module-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    .module-description {
+      color: #7f8c8d;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .module-outcomes {
+      background: linear-gradient(135deg, #f8fafc, #e8f4f8);
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 1px solid rgba(0, 188, 212, 0.1);
+    }
+
+    .module-outcomes strong {
+      color: #2c3e50;
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .module-outcomes ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .module-outcomes li {
+      padding: 0.4rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+      color: #34495e;
+      font-size: 0.9rem;
+    }
+
+    .module-outcomes li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+    }
+
+    /* Skills Section */
+    .skills-section {
+      /* background: linear-gradient(135deg, #f8fafc 0%, #e8f4f8 100%); */
+    }
+
+    .skill-title {
+      color: #2c3e50;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-description {
+      color: #7f8c8d;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .skill-illustration img {
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    /* Workshop Highlights */
+    .highlight-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .highlight-card h5 {
+      color: #2c3e50;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .highlight-card p {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* Workshop Details Card */
+    .workshop-details-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 2px solid #00bcd4;
+      height: fit-content;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .workshop-details-card h4 {
+      color: #2c3e50;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: #f8fafc;
+      border-radius: 10px;
+    }
+
+    .detail-item i {
+      color: #00bcd4;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      width: 20px;
+    }
+
+    .detail-item strong {
+      color: #2c3e50;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .detail-item span {
+      color: #7f8c8d;
+      font-size: 0.85rem;
+    }
+
+    .register-btn {
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      width: 100%;
+      margin: 1.5rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .register-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+    }
+
+    .instructor-info {
+      border-top: 1px solid #e8f4f8;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .instructor-badge {
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .instructor-details strong {
+      color: #2c3e50;
+      font-size: 1.1rem;
+    }
+
+    .instructor-details p {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 0 0;
+      line-height: 1.4;
+    }
+
+    /* Certificate Section */
+    .certificate-section {
+      background: linear-gradient(135deg, #010510 0%, #00214b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .certificate-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .certificate-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%2300bcd4" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%2300bcd4" opacity="0.15"/><circle cx="40" cy="80" r="1.5" fill="%2300bcd4" opacity="0.1"/></svg>') repeat;
+      background-size: 100px 100px;
+    }
+
+    .certificate-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .certificate-badge {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(45deg, #00bcd4, #0097a7);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .certificate-badge i {
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .certificate-title {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .certificate-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .certificate-features {
+      margin-bottom: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .feature-item i {
+      color: #00bcd4;
+      margin-right: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .certificate-btn {
+      background: linear-gradient(45deg, #00bcd4, #0097a7);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .certificate-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4);
+      color: white;
+    }
+
+    .certificate-btn i {
+      margin-right: 0.5rem;
+    }
+
+    .certificate-visual {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+    }
+
+    .certificate-mockup {
+      position: relative;
+      transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+      transition: transform 0.3s ease;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .certificate-mockup:hover {
+      transform: perspective(1000px) rotateY(-10deg) rotateX(2deg);
+    }
+
+    .certificate-mockup img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .certificate-glow {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      background: linear-gradient(45deg, rgba(0, 188, 212, 0.2), rgba(0, 151, 167, 0.2));
+      border-radius: 25px;
+      filter: blur(20px);
+      z-index: -1;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- _____________________________________navbar______________________________________________________________________ -->
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <div class="container custom-container">
-          <a href="../index.html" class="d-flex align-items-center">
-            <div class="logo-container">
-              <img src="../images/new-logo.png" class="logo-img" alt="Logo" />
-            </div>        
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item mx-3"><a class="nav-link" href="../Maker-Hub/makerhub.html">3D Printing</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="../Kits/kits-home.html">Kits</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="../mentoring.html">Mentoring</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="../aboutus.html">About Us</a></li>
-              <li class="nav-item mx-3"><a class="nav-link" href="../contactus.html">Contact Us</a></li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container custom-container">
+      <a href="../index.html" class="d-flex align-items-center">
+        <div class="logo-container">
+          <img src="../images/new-logo.png" class="logo-img" alt="Logo" />
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-3"><a class="nav-link" href="../Kits/kits-home.html">Kits</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../Maker-Hub/makerhub.html">Maker Hub</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../mentoring.html">Learning Center</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../aboutus.html">About Us</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="../contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <a href="#workshop-section" class="floating-btn">
+      <img src="../images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
+      <span>WORKSHOP</span>
+    </a>
+  </div>
+
+  <div class="floating-buttons2">
+    <a href="../Maker-Hub/makerhub.html" class="floating-btn2">
+      <img src="../images/icons_for_floating_button/Group 329-1.png" alt="Products Icon" class="icon-flot" />
+      <span>PRODUCTS</span>
+    </a>
+  </div>
+
+  <div class="floating-container">
+    <div class="button-wrapper">
+      <div class="floating-btn4">
+        <i class="fas fa-share-alt"></i>
+      </div>
+      <div class="social-icons">
+        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="joinus-floating-container">
+    <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
+      <img src="../images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png" alt="Join Us Icon" class="icon-flot" />
+      <span>JOIN US</span>
+    </button>
+    <div class="joinus-extra-buttons" id="joinusExtraButtons">
+      <a href="../Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
+      <a href="../Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleJoinUsButtons() {
+      const buttons = document.getElementById("joinusExtraButtons");
+      buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+
+  <!-- Hero Section -->
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+    data-bs-interval="3000">
+
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item " style="background-image: url('../images/Workshop-page/3D-Printing/cnc-laser-machinery-metal-cutting_103577-5018.png');">
+        <div class="carousel-caption">
+          <div class="hero-text">
+            <p><em>Design</em> <small>boldly</small></p>
+            <p><em>Test</em> <small>curiously</small></p>
+            <p><em>Learn</em> <small>deeply</small></p>
+          </div>
+          <h4>3D Printing Mastery Workshop !</h4>
+          <p>
+            Elarchitek 3D Printing Mastery Workshop is a comprehensive program designed to elevate your skills in 3D modeling, printing technologies, and additive manufacturing development.
+          </p>
+          <a href="#pricing" class="btn btn-info text-black fw-bold">Join the Workshop Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item active" style="background-image: url('../images/Workshop-page/3D-Printing/technology-equipment-blue-laboratory-generated-by-ai.png');">
+        <div class="carousel-caption">
+          <div class="hero-text">
+            <p><em>Design</em> <small>boldly</small></p>
+            <p><em>Test</em> <small>curiously</small></p>
+            <p><em>Learn</em> <small>deeply</small></p>
+          </div>
+          <h4>Master 3D Design & Printing Skills</h4>
+          <p>
+            Build practical 3D models with CAD software, understand printing materials, layer settings, and post-processing techniques for professional-quality 3D printed objects.
+          </p>
+          <a href="#pricing" class="btn btn-info text-black fw-bold">Join the Workshop Now</a>
+        </div>
+      </div>
+      
+
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="background-image: url('../images/Workshop-page/3D-Printing/3d-printing-progress_93675-31475.png');">
+        <div class="carousel-caption">
+          <div class="hero-text">
+            <p><em>Design</em> <small>boldly</small></p>
+            <p><em>Test</em> <small>curiously</small></p>
+            <p><em>Learn</em> <small>deeply</small></p>
+          </div>
+          <h4>Innovation-Driven 3D Projects</h4>
+          <p>
+            Apply your knowledge through real-world 3D printing projects like prototypes, functional parts, artistic designs, and custom manufacturing solutions.
+          </p>
+          <a href="#pricing" class="btn btn-info text-black fw-bold">Join the Workshop Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item" style="background-image: url('../images/Workshop-page/3D-Printing/designer-using-3d-printer.png');">
+        <div class="carousel-caption">
+          <div class="hero-text">
+            <p><em>Design</em> <small>boldly</small></p>
+            <p><em>Test</em> <small>curiously</small></p>
+            <p><em>Learn</em> <small>deeply</small></p>
+          </div>
+          <h4>Professional 3D Manufacturing Skills</h4>
+          <p>
+            Develop industry-ready skills in additive manufacturing, quality control, and production workflows. Learn to create professional prototypes and manufacturing solutions.
+          </p>
+          <a href="#pricing" class="btn btn-info text-black fw-bold">Join the Workshop Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Workshop Introduction -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="mb-5">
+            <h2 class="fw-bold text-center">3D Printing Workshop Programs</h2>
+            <p class="lead text-center mb-4">Transform your ideas into reality with our comprehensive 3D printing workshops. From beginner-friendly demos to advanced manufacturing techniques, we offer structured learning paths for every skill level.</p>
+            
+            <div class="workshop-highlights">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="highlight-card">
+                    <div class="highlight-icon">
+                      <i class="fas fa-cube"></i>
+                    </div>
+                    <h5>Design to Print</h5>
+                    <p>Complete workflow from 3D modeling to finished products using industry-standard software and techniques.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="highlight-card">
+                    <div class="highlight-icon">
+                      <i class="fas fa-tools"></i>
+                    </div>
+                    <h5>Hands-On Experience</h5>
+                    <p>Operate real 3D printers, learn calibration, troubleshooting, and create multiple printed projects.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="highlight-card">
+                    <div class="highlight-icon">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                    <h5>Professional Skills</h5>
+                    <p>Master Tinkercad, Cura, Bambu Studio, Blender, and SolidWorks for comprehensive 3D printing expertise.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="highlight-card">
+                    <div class="highlight-icon">
+                      <i class="fas fa-rocket"></i>
+                    </div>
+                    <h5>Career Ready</h5>
+                    <p>Build a portfolio of projects and gain skills for careers in manufacturing, prototyping, and design.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="workshop-details-card">
+            <h4>Workshop Details</h4>
+            <div class="detail-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <strong>Date</strong>
+                <span>Sunday, March 16, 2025</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-language"></i>
+              <div>
+                <strong>Language</strong>
+                <span>Tamil & English</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <strong>Age</strong>
+                <span>10th std to Working Professionals</span>
+              </div>
+            </div>
+            <div class="instructor-info">
+              <div class="instructor-badge">Instructor</div>
+              <div class="instructor-details">
+                <strong>Mr Gokul & Kottesh</strong>
+                <p>A certified 3D printing specialist with 8+ years of experience in additive manufacturing, CAD design, and rapid prototyping technologies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshop Pricing Cards -->
+  <section class="py-5" id="pricing">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5 whatmakes-head">Choose Your 3D Printing Journey</h2>
+      <div class="workshop-section">
+        <div class="workshop-grid">
+        <!-- PrintSpark Explorer -->
+        <div class="workshop-card">
+          <div class="workshop-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="workshop-content">
+            <div class="workshop-level">BEGINNER</div>
+            <h4 class="workshop-title">PrintSpark Explorer</h4>
+            <div class="workshop-duration">3 Hours Discovery Session</div>
+            <div class="workshop-price">₹1,499</div>
+            <p class="workshop-description">Your first step into the amazing world of 3D printing technology</p>
+            <ul class="workshop-features">
+              <li>3D Printing fundamentals</li>
+              <li>Live printer demonstration</li>
+              <li>Create your first model</li>
+              <li>Take home a 3D print</li>
+            </ul>
+            <button class="btn btn-primary w-100">Start Exploring</button>
+          </div>
+        </div>
+        
+        <!-- MakerForge Foundations -->
+        <div class="workshop-card featured">
+          <div class="workshop-icon">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <div class="workshop-content">
+            <div class="workshop-level">POPULAR</div>
+            <h4 class="workshop-title">MakerForge Foundations</h4>
+            <div class="workshop-duration">1 Day Intensive Program</div>
+            <div class="workshop-price">₹2,999</div>
+            <p class="workshop-description">Build solid 3D printing skills with hands-on projects and real creations</p>
+            <ul class="workshop-features">
+              <li>Complete printer mastery</li>
+              <li>Tinkercad design skills</li>
+              <li>Professional slicing</li>
+              <li>Multiple print projects</li>
+            </ul>
+            <button class="btn btn-primary w-100">Join Foundation</button>
+          </div>
+        </div>
+        
+        <!-- CreativeCraft Academy -->
+        <div class="workshop-card">
+          <div class="workshop-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="workshop-content">
+            <div class="workshop-level">INTERMEDIATE</div>
+            <h4 class="workshop-title">CreativeCraft Academy</h4>
+            <div class="workshop-duration">1 Week Comprehensive Program</div>
+            <div class="workshop-price">₹7,499</div>
+            <p class="workshop-description">Comprehensive skills development with advanced techniques and tools</p>
+            <ul class="workshop-features">
+              <li>Advanced printer settings</li>
+              <li>Multiple design software</li>
+              <li>Quality optimization</li>
+              <li>Professional workflows</li>
+            </ul>
+            <button class="btn btn-primary w-100">Enter Academy</button>
+          </div>
+        </div>
+        
+        <!-- InnovatePro Mastery -->
+        <div class="workshop-card">
+          <div class="workshop-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="workshop-content">
+            <div class="workshop-level">EXPERT</div>
+            <h4 class="workshop-title">InnovatePro Mastery</h4>
+            <div class="workshop-duration">2 Week Certification Program</div>
+            <div class="workshop-price">₹14,999</div>
+            <p class="workshop-description">Professional-level mastery with industry-standard techniques and certification</p>
+            <ul class="workshop-features">
+              <li>Professional CAD software</li>
+              <li>Complex assemblies</li>
+              <li>Industry best practices</li>
+              <li>Official certification</li>
+            </ul>
+            <button class="btn btn-primary w-100">Achieve Mastery</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Learning Modules Section -->
+  <section class="py-5 bg-light" id="course-modules">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Complete Learning Curriculum</h2>
+      <p class="text-center lead mb-5">When you join any 3D printing workshop, you will get these comprehensive modules designed to make you a 3D printing expert</p>
+      
+      <div class="modules-grid">
+        <!-- Module 1 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-print"></i>
+            </div>
+            <h4 class="module-title">3D Printer & Technology Basics</h4>
+          </div>
+          <p class="module-description">Master the fundamentals of 3D printing technology, understand how printers work, and learn essential safety practices.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Operate any FDM 3D printer safely</li>
+              <li>Understand printer components and functions</li>
+              <li>Follow proper safety protocols</li>
             </ul>
           </div>
         </div>
-      </nav>
-      
-      <!-- Floating Buttons -->
-      <div class="floating-buttons">
-        <a href="workshop.html" class="floating-btn">
-          <img src="../images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
-          <span>WORKSHOP</span>
-        </a>
-      </div>
-
-      <div class="floating-buttons2">
-        <a href="../makerhub_product.html" class="floating-btn2">
-          <img src="../images/icons_for_floating_button/Group 329-1.png" alt="Workshop Icon" class="icon-flot" />
-          <span>PRODUCTS</span>
-        </a>
-      </div>
-
-      <div class="floating-container">
-        <div class="button-wrapper">
-          <div class="floating-btn4">
-            <i class="fas fa-share-alt"></i>
+        
+        <!-- Module 2 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h4 class="module-title">Printer Settings & Operation</h4>
           </div>
-
-          <div class="social-icons">
-            <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          <p class="module-description">Learn to fine-tune your printer for perfect results. Master bed leveling, calibration, and troubleshooting techniques.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Set up and calibrate any 3D printer</li>
+              <li>Load filaments and adjust settings</li>
+              <li>Fix common printing problems</li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <!-- JOIN US Floating Button -->
-      <div class="joinus-floating-container">
-        <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
-          <img src="../images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png"
-            alt="Workshop Icon" class="icon-flot" />
-          <span>JOIN US</span>
-        </button>
-
-        <div class="joinus-extra-buttons" id="joinusExtraButtons">
-          <a href="../Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
-          <a href="../Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+        
+        <!-- Module 3 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h4 class="module-title">Tinkercad Design Basics</h4>
+          </div>
+          <p class="module-description">Start your design journey with Tinkercad. Create your first 3D models using simple, intuitive tools perfect for beginners.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Design simple 3D objects from scratch</li>
+              <li>Use basic modeling tools confidently</li>
+              <li>Export models ready for printing</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 4 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h4 class="module-title">Cura Slicer Mastery</h4>
+          </div>
+          <p class="module-description">Transform your 3D models into printable files. Learn to optimize settings for quality, speed, and material efficiency.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Slice models with optimal settings</li>
+              <li>Control print quality and speed</li>
+              <li>Generate perfect G-code files</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 5 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <h4 class="module-title">Bambu Slicer Interface</h4>
+          </div>
+          <p class="module-description">Explore advanced slicing with Bambu Studio. Learn multi-material printing, remote monitoring, and professional workflows.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Use professional slicing software</li>
+              <li>Handle multi-color printing projects</li>
+              <li>Monitor prints remotely</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 6 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h4 class="module-title">Advanced Bambu Settings</h4>
+          </div>
+          <p class="module-description">Master professional-grade printing with advanced calibration, flow tuning, and diagnostic tools for perfect results.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Fine-tune printer performance</li>
+              <li>Calibrate for any filament type</li>
+              <li>Achieve professional print quality</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 7 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h4 class="module-title">Functional Design & Engineering</h4>
+          </div>
+          <p class="module-description">Create models that work in the real world. Learn about tolerances, part orientation, and design for manufacturing principles.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Design functional, working parts</li>
+              <li>Optimize designs for 3D printing</li>
+              <li>Create assemblies and moving parts</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 8 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h4 class="module-title">Quality Testing & Optimization</h4>
+          </div>
+          <p class="module-description">Perfect your printing skills with systematic testing. Learn to tune settings for different materials and achieve consistent results.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Test and optimize print settings</li>
+              <li>Achieve consistent, high-quality results</li>
+              <li>Troubleshoot any printing issues</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 9 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h4 class="module-title">Complete Workflow Mastery</h4>
+          </div>
+          <p class="module-description">Put it all together! Master the complete process from initial concept to finished product with quality control and finishing techniques.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Manage complete printing projects</li>
+              <li>Ensure consistent quality control</li>
+              <li>Deliver professional results</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 10 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h4 class="module-title">Blender for Creative Design</h4>
+          </div>
+          <p class="module-description">Unlock artistic 3D modeling with Blender. Create organic shapes, sculptures, and artistic models that stand out from the crowd.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Create artistic and organic models</li>
+              <li>Use professional sculpting tools</li>
+              <li>Design unique, creative objects</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 11 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h4 class="module-title">SolidWorks Engineering Basics</h4>
+          </div>
+          <p class="module-description">Enter the world of professional CAD design. Learn parametric modeling, constraints, and engineering design principles.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Create precise engineering drawings</li>
+              <li>Use parametric design principles</li>
+              <li>Design with professional CAD tools</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Module 12 -->
+        <div class="module-card">
+          <div class="module-header">
+            <div class="module-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h4 class="module-title">Advanced SolidWorks & Simulation</h4>
+          </div>
+          <p class="module-description">Master professional engineering design with assemblies, simulations, and advanced modeling techniques used in industry.</p>
+          <div class="module-outcomes">
+            <strong>You'll be able to:</strong>
+            <ul>
+              <li>Design complex mechanical assemblies</li>
+              <li>Run basic engineering simulations</li>
+              <li>Create industry-standard designs</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <script>
-        function toggleJoinUsButtons() {
-          const buttons = document.getElementById("joinusExtraButtons");
-          buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
-        }
-      </script>
-    
-    <!-- In your <head> -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-      
-    
-    <!-- _____________________________________________hero section________________________________________________________ -->
-
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
-        data-bs-interval="2000">
-
-        <div class="carousel-inner">
-
-            <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url('./images/3d-printing-workshop-carousel-images/3d-printing-machine_144962-7439.png');">
-                <div class="carousel-caption">
-                    <div class="hero-text">
-                        <p><em>3D Printing</em> </p>
-                        <p><em>Mastery</em> </p>
-                        <p><em>Workshop!</em></p>
-                    </div>
-                    <p>
-                        Elarchitek 3D Printing Workshop 
-                        offers hands-on learning in design 
-                        and prototyping. Create real-world 
-                        models using 3D printing 
-                        technology!
-                    </p>
-                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/3d-printing-progress_93675-31475.png');">
-                <div class="carousel-caption">
-                    <div class="hero-text">
-                        <p><em>3D Printing</em> </p>
-                        <p><em>Mastery</em> </p>
-                        <p><em>Workshop!</em></p>
-                    </div>
-                    <p>
-                        Elarchitek 3D Printing Workshop 
-                        offers hands-on learning in design 
-                        and prototyping. Create real-world 
-                        models using 3D printing 
-                        technology!
-                    </p>
-                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
-                </div>
-            </div>
-
-
-            <!-- Slide 3 -->
-            <div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/cnc-laser-machinery-metal-cutting_103577-5018.png');">
-                <div class="carousel-caption">
-                    <div class="hero-text">
-                        <p><em>3D Printing</em> </p>
-                        <p><em>Mastery</em> </p>
-                        <p><em>Workshop!</em></p>
-                    </div>
-                    <p>
-                        Elarchitek 3D Printing Workshop 
-                        offers hands-on learning in design 
-                        and prototyping. Create real-world 
-                        models using 3D printing 
-                        technology!
-                    </p>
-                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
-                </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/designer-using-3d-printer.png');">
-                <div class="carousel-caption">
-                    <div class="hero-text">
-                        <p><em>3D Printing</em> </p>
-                        <p><em>Mastery</em> </p>
-                        <p><em>Workshop!</em></p>
-                    </div>
-                    <p>
-                        Elarchitek 3D Printing Workshop 
-                        offers hands-on learning in design 
-                        and prototyping. Create real-world 
-                        models using 3D printing 
-                        technology!
-                    </p>
-                    <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
-                </div>
-            </div>
-
-<!-- Slide 4 -->
-<div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/industrial-laser-cut-machine-while-cutting-sheet-metal-with-sparking-light-free-space-right-side-text_67340-579.png');">
-    <div class="carousel-caption">
-        <div class="hero-text">
-            <p><em>3D Printing</em> </p>
-            <p><em>Mastery</em> </p>
-            <p><em>Workshop!</em></p>
-        </div>
-        <p>
-            Elarchitek 3D Printing Workshop 
-            offers hands-on learning in design 
-            and prototyping. Create real-world 
-            models using 3D printing 
-            technology!
-        </p>
-        <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
     </div>
-</div>
+  </section>
 
-
-<!-- Slide 4 -->
-<div class="carousel-item" style="background-image: url('./images/3d-printing-workshop-carousel-images/industrial-laser-cut-machine-while-cutting-sheet-metal-with-sparking-light-free-space-right-side-text_67340-579.png');">
-    <div class="carousel-caption">
-        <div class="hero-text">
-            <p><em>3D Printing</em> </p>
-            <p><em>Mastery</em> </p>
-            <p><em>Workshop!</em></p>
-        </div>
-        <p>
-            Elarchitek 3D Printing Workshop 
-            offers hands-on learning in design 
-            and prototyping. Create real-world 
-            models using 3D printing 
-            technology!
-        </p>
-        <a href="#" class="btn btn-info text-black fw-bold">Join The Workshop Now</a>
-    </div>
-</div>
-       
-        </div>
-    </div>
-
-    <!-- _________________________________________mentor section_________________________________________________________________________ -->
-    <div class="container my-5">
-        <div class="row align-items-center g-4">
-            <!-- Left Column -->
-            <div class="col-lg-7">
-                <div class="d-flex align-items-center mb-2 flex-wrap">
-                    <span class="text-decoration-line-through text-muted me-3">Rs. 2,999.00</span>
-                    <span class="fw-bold fs-5 text-dark me-3">Rs.999.00</span>
-                    <span class="text-success fw-semibold">45% off</span>
-                </div>
-                <h4 class="fw-bold mb-3">Why you should attend this workshop ?</h4>
-                <p class="text-muted">
-                    Tamil Nadu is rapidly emerging as a <strong>global hotspot</strong> for
-                    Electronics and Robotics Manufacturing, and this workshop is your gateway
-                    to step confidently into this futuristic world. Whether you're a student
-                    or a <strong>tech enthusiast</strong>, this is your chance to gain practical
-                    knowledge and <strong>hands-on exposure</strong>.
-                </p>
-            </div>
-
-            <!-- Right Column (Mentor Card) -->
-            <div class="col-lg-5">
-                <div class="mentor-card">
-                    <div class="d-flex align-items-start">
-                        <img src="./images/workshop4.png" alt="Mentor Image" class="mentor-img">
-                        <div>
-                            <span class="badge badge-dark mb-2">Mentor</span>
-                            <h6 class="fw-bold mb-2">Kottesh</h6>
-                            <p class="text-muted mb-2">
-                                An experienced professional in the dynamic field of science and technology, founded LEMS
-                                Academy in Chennai in 2014.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ________________________________________dropdown____________________________________________________________________ -->
+    <!-- Skills Section - Robot Workshop Style -->
+  <!-- Certificate Section -->
+  <section class="certificate-section py-5">
     <div class="container">
-        <div class="row">
-            <!-- Left Column: Accordion -->
-            <div class="col-md-6">
-
-                <h2 class="text-center fw-bold pb-4">What You’ll Learn</h2>
-                <div class="accordion" id="workshopAccordion">
-
-                    <!-- Workshop Item 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingZero">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
-                            To Explore Thriving Opportunities
-                          </button>
-                        </h2>
-                        <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingZero"
-                          data-bs-parent="#workshopAccordion">
-                          <div class="accordion-body dropdown-card">
-                            <p>
-                              Understand how Electronics is the backbone of modern industries including consumer
-                              products, automotive, healthcare, defense, and IoT systems. Learn about the rising
-                              demand for skilled electronics engineers in both national and global markets — and how you can build your path in this expanding field.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      
-                              
-                                        <!-- Item 1 -->
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                              Master the Core Components
-                                            </button>
-                                          </h2>
-                                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                            data-bs-parent="#workshopAccordion">
-                                            <div class="accordion-body">
-                                              Explore the fundamentals of electronics — including resistors, capacitors,
-                                              diodes, transistors, ICs, and sensors. Learn their real-world applications,
-                                              understand circuit design, and develop the skill to troubleshoot and build
-                                              functional electronic systems.
-                                            </div>
-                                          </div>
-                                        </div>
-                              
-                                        <!-- Item 2 -->
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                              Tamil Language Instructions
-                                            </button>
-                                          </h2>
-                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                            data-bs-parent="#workshopAccordion">
-                                            <div class="accordion-body">
-                                              All sessions are designed to explain complex electronic
-                                              concepts in easy-to-understand Tamil, paired with real-life
-                                              practical examples. Technical English terms will be explained
-                                              clearly, and live Q&A support ensures full understanding for every student.
-                                            </div>
-                                          </div>
-                                        </div>
-                              
-                                        <!-- Item 3 -->
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                              Empower Yourself for the Future
-                                            </button>
-                                          </h2>
-                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                            data-bs-parent="#workshopAccordion">
-                                            <div class="accordion-body">
-                                              To Explore Thriving Opportunities
-                                              Understand how Electronics is the backbone of
-                                              modern industries including consumer products,
-                                              automotive, healthcare, defense, and IoT systems.
-                                              Learn about the rising demand for skilled electronics
-                                              engineers in both national and global markets — and how you can build your path in this expanding field.
-                                            </div>
-                                          </div>
-                                        </div>
-                              
-                                        <!-- Item 4 -->
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingFour">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                              Hands-On Electronic Project Building
-                                            </button>
-                                          </h2>
-                                          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                            data-bs-parent="#workshopAccordion">
-                                            <div class="accordion-body">
-                                              Get guided practice in assembling, wiring, and testing basic
-                                              electronic circuits. Learn how to read circuit diagrams, use
-                                              multimeters, and debug real hardware issues — turning theory
-                                              into practical, job-ready skills.
-                                            </div>
-                                          </div>
-                                        </div>
-                              
-                                        <!-- Item 5 -->
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingFive">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                              Introduction to Microcontrollers & Sensors
-                                            </button>
-                                          </h2>
-                                          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                            data-bs-parent="#workshopAccordion">
-                                            <div class="accordion-body">
-                                              Begin with microcontroller basics like Arduino — understand how digital and analog
-                                              inputs/outputs work, how sensors interact with circuits, and how to program them for
-                                              real-world automation applications.
-                                            </div>
-                                          </div>
-                                        </div>
-                              
-                                        <!-- Item 6 -->
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingSix">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                              Career Guidance & Industry Insights
-                                            </button>
-                                          </h2>
-                                          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                            data-bs-parent="#workshopAccordion">
-                                            <div class="accordion-body">
-                                              Get expert advice on building a project-based portfolio, understanding job roles in
-                                              core electronics industries, and planning your path for:
-                                              • Electronics engineering jobs
-                                              • Freelance circuit design projects
-                                              • Starting your own tech venture
-                                              • Higher studies in Embedded Systems, IoT, and Automation fields.
-                                            </div>
-                                          </div>
-                                        </div>
-                              
-                                      </div>
-                                    </div>
-            <div class="col-md-6 col-12">
-                <div class="card" style="border-radius:20px !important">
-                    <div class="card-body" style="padding: 20px;line-height:50px;">
-                        <h5 class="card-title">WorkShop Details</h5>
-                        <ul class="list-unstyled pt-4">
-                            <li class="workshop-detail-item">
-                                <i class="fa-solid fa-calendar-days"> 🗓️</i>
-                                Date
-                                <span class="sub-cont">Sunday, February 23, 2025</span>
-                            </li>
-                            <li class="workshop-detail-item">
-                                <i class="fa-solid fa-globe">🌐</i>
-                                Language
-                                <span class="sub-cont">Tamil</span>
-                            </li>
-                            <li class="workshop-detail-item">
-                                <i class="fa-solid fa-user-graduate">🎂</i>
-                                Age
-                                <span class="sub-cont">11th std to Working Professionals</span>
-                            </li>
-                            <li class="workshop-detail-item">
-                                <button class="register-btn">Register Now ₹999.00</button>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="certificate-content">
+            <div class="certificate-badge">
+              <i class="fas fa-medal"></i>
+              <span>CERTIFICATION</span>
             </div>
+            <h2 class="certificate-title">Get Your Official 3D Printing Certificate</h2>
+            <p class="certificate-description">
+              Earn a professional certificate upon successful completion of our 3D printing workshop. This industry-recognized credential validates your skills in 3D design, printing technologies, and additive manufacturing.
+            </p>
+            <div class="certificate-features">
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Industry-recognized certification</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Digital & physical certificate</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>LinkedIn profile enhancement</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Career advancement support</span>
+              </div>
+            </div>
+            <button class="certificate-btn" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <i class="fas fa-eye"></i>
+              View Sample Certificate
+            </button>
+          </div>
         </div>
-    </div>
-
-    <!-- check -->
-    <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-              </div>
+        <div class="col-lg-6">
+          <div class="certificate-visual">
+            <div class="certificate-mockup">
+              <img src="../images/certificate_3d.jpg" alt="3D Printing Certificate">
+              <div class="certificate-glow"></div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-              </div>
-            </div>
-          </div> -->
-
-    <!-- __________________________________________certificate section ____________________________________________________________ -->
-
-    <div class="badge-container">
-        <h1 class="badge-title">Certified Achievement Badge</h1>
-        <p class="badge-text">
-            Receive an official <strong>Elarcitek STEM Workshop certificate</strong> upon successful completion — a
-            valuable proof of your
-            <strong>hands-on experience</strong> in
-            <strong>Science, Technology, Engineering,</strong> and
-            <strong>Mathematics</strong>. This certificate will strengthen your resume and showcase your
-            <strong>commitment to practical learning</strong> for future
-            <strong>academic</strong> and <strong>career opportunities</strong>.
-        </p>
-    </div>
-
-   <div class="container">
-    <div class="row">
-      <div class="col-12 certificate-section">
-       
-          <img src="./images/certificate_3d.jpg" alt="Certificate Image" class="certificate-image" />
-
+          </div>
+        </div>
       </div>
     </div>
-   </div>
-  
+  </section>
 
-    <!-- _________________________________________imagecontent_______________________________________________________________________ -->
-    <section class="design-challenges">
-        <div class="design-img">
-            <img src="./images/workshop-balance-images/3d_matery1.png" alt="STEM Illustration" />
+  <!-- Skills Section -->
+  <section class="skills-section py-5">
+    <div class="container">
+      <!-- 3D Design Skills -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="skill-illustration text-center">
+            <img src="../images/Workshop-page/3D-Printing/3d-designer-cnc-machine-operator_18660-3142 1.png" alt="3D Design" class="img-fluid">
+          </div>
         </div>
-        <div class="design-text">
-            <h2>3D Design Essentials for Printing</h2>
-            <p style="font-size: 23px; font-weight: 500; color: #555555; line-height: 1.6; margin: 0 auto;">
-                Learn the basics of 3D modeling software and 
-understand key design principles for successful 
-prints. Create simple models optimized for the 
-3D printing process, focusing on elements like 
-overhangs and support needs
-            </p>
+        <div class="col-lg-6">
+          <h3 class="skill-title">3D Design Essentials for Printing</h3>
+          <p class="skill-description">
+            Learn the basics of 3D modeling software and understand key design principles for successful prints. Create simple models optimized for the 3D printing process, focusing on elements like overhangs and support needs.
+          </p>
         </div>
-    </section>
+      </div>
 
-    <section class="design-challenges">
-
-        <div class="design-text">
-            <h2> The 3D Print Process</h2>
-            <p style="font-size: 23px; font-weight: 500; color: #555555; line-height: 1.6; margin: 0 auto;">
-                Explore the FDM 3D printing process and the 
-                role of slicing software. Understand essential 
-                printer settings and their impact on the final 
-                output quality.
-
-            </p>
+      <!-- 3D Print Process -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+          <div class="skill-illustration text-center">
+            <img src="../images/Workshop-page/3D-Printing/30448 1.png" alt="3D Print Process" class="img-fluid">
+          </div>
         </div>
-        <div class="design-img">
-            <img src="./images/workshop-balance-images/3d_mastery2.png" alt="STEM Illustration" />
+        <div class="col-lg-6 order-lg-1">
+          <h3 class="skill-title">The 3D Print Process</h3>
+          <p class="skill-description">
+            Explore the FDM 3D printing process and the role of slicing software. Understand essential printer settings and their impact on the final output quality.
+          </p>
         </div>
-    </section>
+      </div>
 
-    <section class="design-challenges">
-        <div class="design-img">
-            <img src="./images/workshop-balance-images/3d_mastery3.png" alt="STEM Illustration" />
+      <!-- 3D Applications -->
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="skill-illustration text-center">
+            <img src="../images/Workshop-page/3D-Printing/d-printing-technology-vector-concept-web-banner-website-page_103044-4123 1.png" alt="3D Applications" class="img-fluid">
+          </div>
         </div>
-        <div class="design-text mb-4">
-            <h2> Real-World 3D Printing Applications & 
-                Innovation</h2>
-            <p style="font-size: 23px; font-weight: 500; color: #555555; line-height: 1.6; margin: 0 auto;">
-                Discover the wide range of applications for 3D 
-printing in various industries. See inspiring 
-examples of innovative projects and brainstorm 
-your own creative ideas
-            </p>
+        <div class="col-lg-6">
+          <h3 class="skill-title">Real-World 3D Printing Applications & Innovation</h3>
+          <p class="skill-description">
+            Discover the wide range of applications for 3D printing in various industries. See inspiring examples of innovative projects and brainstorm your own creative ideas.
+          </p>
         </div>
-    </section>
- <!-- __________________________________________footer_____________________________________________________________________________ -->
+      </div>
+    </div>
+  </section>
 
- <footer>
+  <!-- Certificate Modal -->
+  <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="certificateModalLabel">
+            <i class="fas fa-medal me-2"></i>3D Printing Workshop Certificate
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="certificate-preview">
+            <img src="../images/certificate_3d.jpg" class="img-fluid" alt="3D Printing Workshop Certificate">
+          </div>
+          <div class="mt-3">
+            <p class="certificate-note">Sample Certificate - Awarded upon successful completion of the 3D Printing Workshop</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Scrolling Text Section -->
+  <div class="scrolling-text-section">
+    <div class="scrolling-container">
+      <div class="scrolling-text">
+        <span class="text-item">
+          <i class="fas fa-drafting-compass"></i> Design
+        </span>
+        <span class="text-item">
+          <i class="fas fa-flask"></i> Test
+        </span>
+        <span class="text-item">
+          <i class="fas fa-graduation-cap"></i> Learn
+        </span>
+        <span class="set-separator"></span>
+        <span class="text-item">
+          <i class="fas fa-drafting-compass"></i> Design
+        </span>
+        <span class="text-item">
+          <i class="fas fa-flask"></i> Test
+        </span>
+        <span class="text-item">
+          <i class="fas fa-graduation-cap"></i> Learn
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
     <div class="footer-main">
       <!-- Logo -->
       <div class="footer-col">
-        <img src="./images/elarchi-icon.png" alt="Elarchitek Logo" class="footer-logo" />
+        <img src="../images/new-logo.png" alt="Elarchitek Logo" class="footer-logo" />
       </div>
 
-      <!-- Column 1 -->     
+      <!-- Column 1 -->
       <div class="footer-col">
         <h4>Products</h4>
-        <p>Home</p>
-        <p>Robotic Kit</p>
-        <p>Computer Kit</p>
-        <p>STEM Kit</p>
+        <a href="../index.html">Home</a>
+        <a href="../Kits/robotickits.html">Robotic Kit</a>
+        <a href="../Kits/computerKits.html">Computer Kit</a>
+        <a href="../Kits/stemkits.html">STEM Kit</a>
       </div>
 
-        <!-- Vertical Divider -->
-        <div class="divider"></div>
+      <!-- Vertical Divider -->
+      <div class="divider"></div>
 
       <!-- Column 2 -->
       <div class="footer-col">
         <h4>Workshops</h4>
-        <p>Maker Hub</p>
-        <p>Robotic Workshop</p>
-        <p>Computer Workshop</p>
-        <p>STEM Workshop</p>
+        <a href="../Maker-Hub/makerhub.html">3D Printing</a>
+        <a href="Roboticmastery.html">Robotic Workshop</a>
+        <a href="electronicmastery.html">Electronic Workshop</a>
+        <a href="stem.html">STEM Workshop</a>
       </div>
 
-        <!-- Vertical Divider -->
-        <div class="divider"></div>
+      <!-- Vertical Divider -->
+      <div class="divider"></div>
 
       <!-- Column 3 -->
       <div class="footer-col">
         <h4>Company</h4>
-        <p>3D Printing Workshop</p>
-        <p>Learning Center</p>
-        <p>About Us</p>
-        <p>Contact Us</p>
+        <a href="3d_printing_mastery.html">3D Printing Workshop</a>
+        <a href="../mentoring.html">Learning Center</a>
+        <a href="../aboutus.html">About Us</a>
+        <a href="../contactus.html">Contact Us</a>
       </div>
 
+      <!-- Vertical Divider -->
+      <div class="divider"></div>
 
-        <!-- Contact Info -->
-        <div class="footer-col contact-info">
-          <h4>Contact</h4>
-          <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
-          <p><i class="fas fa-phone"></i> +91-1234567890</p>
-          <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
-        </div>
-  
+      <!-- Contact Info -->
+      <div class="footer-col contact-info">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
+        <p><i class="fas fa-phone"></i> +91-1234567890</p>
+        <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
+      </div>
+
     </div>
 
-    
-
+    <!-- Divider -->
     <hr class="footer-divider" />
     <!-- Footer Bottom -->
     <div class="footer-bottom">
@@ -614,60 +1408,8 @@ your own creative ideas
     <p class="footer-copy">© 2025 Elarchitek. All rights reserved. Empowering Innovation Through Electronics.</p>
   </footer>
 
-
-<!-- ______________________________________courosil________________________________________________________ -->
-
-
-<div class="carousel-1">
-    <div class="carousel-1-slide">
-      <!-- Logos -->
-      <img src="./images/3d_printing_mastery_rest/3d-kottesh.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/amma-flip.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/blue dragon.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/heart key chain.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/vishal-flip.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/3d-kottesh.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/amma-flip.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/blue dragon.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/heart key chain.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/vishal-flip.png" alt="">
-     
-    </div>
-  </div>
-  
-  <script>
-    const clone1 = document.querySelector(".carousel-1-slide").cloneNode(true);
-    document.querySelector(".carousel-1").appendChild(clone1);
-  </script>
-  
-  
-  <div class="carousel-2">
-    <div class="carousel-2-slide">
-      <!-- Logos -->
-      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-gr.png" alt="courosil-img" class="courosil-right">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-light-yellow.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-light.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-3-light.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-light-2.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-gr.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/blutooth-light-yellow.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-3-light.png" alt="">
-      <img src="./images/3d_printing_mastery_rest/out-products-light/skull-light-2.png" alt="">
-      
-    </div>
-  </div>
-  
-  <script>
-    const clone2 = document.querySelector(".carousel-2-slide").cloneNode(true);
-    document.querySelector(".carousel-2").insertBefore(clone2, document.querySelector(".carousel-2").firstChild);
-  </script>
-
-    <!-- ____________________________________________________________________________________________________________________ -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
- 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

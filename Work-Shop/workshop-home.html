@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../Kits/kits-home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container custom-container">
+            <a href="../index.html" class="d-flex align-items-center">
+                <div class="logo-container">
+                    <img src="../images/new-logo.png" class="logo-img" alt="Logo" />
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3"><a class="nav-link" href="../Maker-Hub/makerhub.html">3D Printing</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../Kits/kits-home.html">Kits</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../mentoring.html">Mentoring</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../aboutus.html">About Us</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="../contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+      <a href="workshop-home.html" class="floating-btn">
+        <img src="../images/icons_for_floating_button/Group 329.png" alt="Kits Icon" class="icon-flot" />
+        <span>KITS</span>
+      </a>
+    </div>
+
+    <div class="floating-buttons2">
+      <a href="../Maker-Hub/makerhub.html" class="floating-btn2">
+        <img src="../images/icons_for_floating_button/Group 329-1.png" alt="Products Icon" class="icon-flot" />
+        <span>PRODUCTS</span>
+      </a>
+    </div>
+
+    <div class="floating-container">
+      <div class="button-wrapper">
+        <div class="floating-btn4">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="joinus-floating-container">
+      <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
+        <img src="../images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png" alt="Join Us Icon" class="icon-flot" />
+        <span>JOIN US</span>
+      </button>
+      <div class="joinus-extra-buttons" id="joinusExtraButtons">
+        <a href="../Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
+        <a href="../Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleJoinUsButtons() {
+        const buttons = document.getElementById("joinusExtraButtons");
+        buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
+      }
+    </script>
+
+    <!-- Hero Section -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+        data-bs-interval="2000">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active"
+                style="background-image: url('../images/Workshop-page/Electronic/group-diverse-teens-young-people-doing-activities-together-celebrating-world-youth-skills-day.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Hands-on</em></p>
+                        <p><em>Learning</em></p>
+                        <p><em>Innovation</em></p>
+                        <p><em>Workshops</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>3D Printing</strong>, <strong>Robotics</strong>, <strong>Electronics</strong>,
+                            and <strong>STEM Workshops</strong></em> help students explore technology through
+                        <strong>hands-on</strong> projects. <em>These workshops boost creativity,
+                            <strong>problem-solving</strong>, and technical skills in a fun way.</em>
+                    </p>
+
+                    <a href="#workshops-section" class="btn-info fw-bold" style="margin: 20px 0;">Join a Workshop</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item"
+                style="background-image: url('../images/Workshop-page/Robotic/children-making-robot.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Build</em></p>
+                        <p><em>Create</em></p>
+                        <p><em>Innovate</em></p>
+                        <p><em>Learn</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Empowering Innovators</strong> through <strong>Hands-On Workshops</strong></em> 
+                        that transform ideas into reality through <strong>practical</strong> learning experiences. 
+                        <em>Build real projects, <strong>master new skills</strong>, and unlock your creative potential.</em>
+                    </p>
+                    <a href="#workshops-section" class=" btn-info fw-bold">Join a Workshop</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item"
+                style="background-image: url('../images/Workshop-page/3D-Printing/designer-using-3d-printer.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Design</em></p>
+                        <p><em>Print</em></p>
+                        <p><em>Create</em></p>
+                        <p><em>Master</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Professional Workshops</strong> designed for <strong>Real Learning</strong></em> 
+                        with industry experts and cutting-edge technology. <strong>hands-on</strong> experience with 
+                        <em>modern tools, <strong>practical skills</strong>, and innovative techniques.</em>
+                    </p>
+                    <a href="#workshops-section" class=" btn-info fw-bold">Join a Workshop</a>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item"
+                style="background-image: url('../images/Workshop-page/Electronic/young-female-inventor-creating-her-workshop.png');">
+                <div class="carousel-caption">
+                    <div class="hero-text">
+                        <p><em>Expert</em></p>
+                        <p><em>Guidance</em></p>
+                        <p><em>Real</em></p>
+                        <p><em>Projects</em></p>
+                    </div>
+
+                    <p class="justify"><em><strong>Transform Your Skills</strong> with <strong>Expert-Led Workshops</strong></em> 
+                        that provide comprehensive learning in technology and innovation. 
+                        <strong>hands-on</strong> projects with <em>personalized guidance, <strong>industry insights</strong>, 
+                        and practical applications.</em>
+                    </p>
+                    <a href="#workshops-section" class=" btn-info fw-bold">Join a Workshop</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Workshop Features Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e8f4f8 100%);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" style="color: #010510; font-size: 2.5rem; margin-bottom: 1rem;">What's inside Elarchitek Workshops</h2>
+                <p class="lead" style="color: #666; max-width: 800px; margin: 0 auto;">Expert-led workshops designed by professionals from <strong>IIT Kanpur</strong>, <strong>IIT Bombay</strong>, and industry experts from <strong>Microsoft</strong>, <strong>Amazon</strong>, and <strong>Intel</strong>.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="workshop-feature-card text-center h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-chalkboard-teacher" style="font-size: 3rem; color: #00bcd4;"></i>
+                        </div>
+                        <h5 style="color: #010510; font-weight: 600;">Expert Instructors</h5>
+                        <p style="color: #666; font-size: 0.9rem;">Learn from industry professionals with years of hands-on experience</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="workshop-feature-card text-center h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-tools" style="font-size: 3rem; color: #00bcd4;"></i>
+                        </div>
+                        <h5 style="color: #010510; font-weight: 600;">Hands-On Projects</h5>
+                        <p style="color: #666; font-size: 0.9rem;">Build real projects and gain practical experience with modern tools</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="workshop-feature-card text-center h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-user-friends" style="font-size: 3rem; color: #00bcd4;"></i>
+                        </div>
+                        <h5 style="color: #010510; font-weight: 600;">Personal Mentoring</h5>
+                        <p style="color: #666; font-size: 0.9rem;">One-on-one guidance sessions worth <strong>₹3000</strong> included</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="workshop-feature-card text-center h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-certificate" style="font-size: 3rem; color: #00bcd4;"></i>
+                        </div>
+                        <h5 style="color: #010510; font-weight: 600;">Certification</h5>
+                        <p style="color: #666; font-size: 0.9rem;">Industry-recognized certificates to boost your career prospects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+    .workshop-feature-card {
+        background: white;
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 188, 212, 0.1);
+    }
+    
+    .workshop-feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 188, 212, 0.15);
+        border-color: #00bcd4;
+    }
+    
+    .workshop-feature-card:hover .feature-icon i {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+    </style>
+
+    <div class="container text-center" id="workshops-section" style="padding: 3rem 0 2rem 0;">
+        <h2 class="fw-bold" style="color: #010510; font-size: 2.5rem; margin: 0;">Let's Learn Together</h2>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="../images/Workshop-page/3D-Printing/woman-engineer-prints-on-3d-260nw-2334912121-removebg-preview.png"
+                                alt="3D Printing" class="kit-image2">
+                            <h3 class="kit-title">3D Printing Workshop</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>3D Printing Workshop</strong> </h1>
+                            <p style="text-align: justify;">Master the art of 3D design and printing technology through hands-on experience. 
+                                Learn CAD modeling, slicing software, and printing techniques to create professional prototypes and functional objects. 
+                                Perfect for beginners to advanced learners looking to explore additive manufacturing.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="3d_printing_mastery.html">Explore</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/Workshop-page/Robotic/pngtree-robot-holding-a-glass-of-beer-on-wooden-table-in-workshop-png-image_12780350.png"
+                                alt="Robotics" class="kit-image2">
+                            <h3 class="kit-title">Robotics Mastery</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>Robotics Mastery</strong> </h1>
+                            <p style="text-align: justify;">Build and program intelligent robots using Arduino, sensors, and motors. 
+                                Learn autonomous navigation, sensor integration, and AI programming to create robots that can interact with their environment. 
+                                Develop skills in automation, control systems, and robotic engineering.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="Roboticmastery.html">Explore</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mb-5 ">
+        <div class="row">
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/Workshop-page/Electronic/capacitor-different-chips-semiconductor-and-electrical-components-for-electronic-parts-vector-electrical-component-technology-illustration-2BH1X0W-removebg-preview.png" alt="Electronics"
+                                class="kit-image2">
+                            <h3 class="kit-title">Electronics Mastery</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>Electronics Mastery</strong> </h1>
+                            <p style="text-align: justify;">Explore the fundamentals of electronics through practical circuit building and component analysis. 
+                                Learn PCB design, Arduino programming, and IoT applications. Build real electronic projects from LED circuits to 
+                                sensor-based systems and smart devices.</p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="electronicmastery.html">Explore</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-5">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../images/Kits-Page/Stem-kits/Gemini_Generated_Image_s82nbvs82nbvs82n-removebg-preview.png" alt="STEM Workshop" class="kit-image2">
+                            <h3 class="kit-title">STEM Workshop</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 style="margin-bottom: 10%;"> <strong>STEM Workshop</strong> </h1>
+                            <p style="text-align: justify;">Comprehensive STEM learning experience combining Science, Technology, Engineering, and Mathematics. 
+                                Hands-on experiments and innovative projects designed to inspire curiosity and develop critical thinking skills. 
+                                <strong>Coming Soon!</strong></p>
+                            <button class="explore-btn"> <a class="explore-button"
+                                    href="stem.html">Coming Soon</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+    </script>
+
+    <!-- Rating Section -->
+    <section class="rating-section">
+        <div class="rating-left">
+            <div class="rating-score">4.9 <span>★★★★★</span></div>
+            <div class="rating-count">Based on 1,247 workshop reviews</div>
+
+            <div class="rating-bar"><span>5 ★</span>
+                <div>
+                    <div style="width: 92%"></div>
+                </div><span>1,147</span>
+            </div>
+            <div class="rating-bar"><span>4 ★</span>
+                <div>
+                    <div style="width: 12%"></div>
+                </div><span>58</span>
+            </div>
+            <div class="rating-bar"><span>3 ★</span>
+                <div>
+                    <div style="width: 8%"></div>
+                </div><span>25</span>
+            </div>
+            <div class="rating-bar"><span>2 ★</span>
+                <div>
+                    <div style="width: 4%"></div>
+                </div><span>12</span>
+            </div>
+            <div class="rating-bar"><span>1 ★</span>
+                <div>
+                    <div style="width: 2%"></div>
+                </div><span>5</span>
+            </div>
+        </div>
+
+        <div class="rating-right">
+            <div class="circle-box">
+                <div class="circle"><span>4.8</span></div>
+                <p>Learning Quality</p>
+            </div>
+            <div class="circle-box">
+                <div class="circle"><span>4.9</span></div>
+                <p>Expert Guidance</p>
+            </div>
+            <div class="circle-box">
+                <div class="circle"><span>4.7</span></div>
+                <p>Hands-on Experience</p>
+            </div>
+            <div class="circle-box">
+                <div class="circle"><span>4.8</span></div>
+                <p>Project Quality</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling Text Section -->
+    <div class="scrolling-text-section">
+        <div class="scrolling-container">
+            <div class="scrolling-text">
+                <span class="text-item">
+                    <i class="fas fa-drafting-compass"></i> Design
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-flask"></i> Test
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-graduation-cap"></i> Learn
+                </span>
+                <span class="set-separator"></span>
+                <span class="text-item">
+                    <i class="fas fa-drafting-compass"></i> Design
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-flask"></i> Test
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-graduation-cap"></i> Learn
+                </span>
+                <span class="set-separator"></span>
+                <span class="text-item">
+                    <i class="fas fa-drafting-compass"></i> Design
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-flask"></i> Test
+                </span>
+                <span class="text-item">
+                    <i class="fas fa-graduation-cap"></i> Learn
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col">
+                <img src="../images/new-logo.png" alt="Elarchitek Logo" class="footer-logo" />
+            </div>
+
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="../index.html">Home</a>
+                <a href="../Kits/robotickits.html">Robotic Kit</a>
+                <a href="../Kits/computerKits.html">Computer Kit</a>
+                <a href="../Kits/stemkits.html">STEM Kit</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="footer-col">
+                <h4>Workshops</h4>
+                <a href="../Maker-Hub/makerhub.html">3D Printing</a>
+                <a href="Roboticmastery.html">Robotic Workshop</a>
+                <a href="electronicmastery.html">Electronic Workshop</a>
+                <a href="stem.html">STEM Workshop</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="3d_printing_mastery.html">3D Printing Workshop</a>
+                <a href="../mentoring.html">Learning Center</a>
+                <a href="../aboutus.html">About Us</a>
+                <a href="../contactus.html">Contact Us</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="footer-col contact-info">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
+                <p><i class="fas fa-phone"></i> +91-1234567890</p>
+                <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
+            </div>
+        </div>
+
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <p>Terms-and-conditions</p>
+                <p>Privacy-policy</p>
+            </div>
+            <div class="footer-social">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Elarchitek. All rights reserved. Empowering Innovation Through Electronics.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

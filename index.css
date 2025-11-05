@@ -297,48 +297,109 @@ body, html {
 
 /* ___________________________________________card________________________________________________________________ */
 .feature-card {
-  border-radius: 20px;
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 2rem 1.5rem;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #00bcd4, #010510, #00bcd4);
+  border-radius: 25px;
+  z-index: -1;
 }
 
 .feature-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 188, 212, 0.2);
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
 }
 
-.card-img-top {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  margin-bottom: 1.5rem;
-  padding: 0;
+.feature-card:hover .card-title {
+  color: white !important;
+  font-weight: 800 !important;
+}
+
+.feature-card:hover .card-text {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 1.5rem;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+}
+
+.card-icon i {
+  font-size: 2rem;
+  color: white;
 }
 
 .whatmakes-head{
   margin-top: 6%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.whatmakes-head::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #00bcd4, #0097a7);
+  border-radius: 2px;
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .card-text {
-  color: #6c757d;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: justify;
+  color: #34495e;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
   flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.card-body {
+  padding: 0 2rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -467,9 +528,90 @@ body, html {
   margin-left: 35%;
 }
 
-.dropdown-content{
-  font-family:Georgia, serif;
-  font-style: italic;
+.workshop-card-home {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.workshop-card-home::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #00bcd4, #010510, #00bcd4);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.workshop-card-home:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 188, 212, 0.2);
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+}
+
+.workshop-card-home:hover .workshop-title-home,
+.workshop-card-home:hover .workshop-desc-home {
+  color: white !important;
+}
+
+.workshop-icon-home {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+}
+
+.workshop-icon-home i {
+  font-size: 2rem;
+  color: white;
+}
+
+.workshop-title-home {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.workshop-desc-home {
+  color: #34495e;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.workshop-btn-home {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.workshop-btn-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+  color: white;
 }
 /* ______________________________________footer___________________________________________________ */
 body {
@@ -1967,9 +2109,9 @@ img {
     box-shadow: none;
 }
 
+.navbar-toggler .navbar-toggler-icon,
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    filter: invert(1);
+    background-image: url("data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 30 30&#39;%3e%3cpath stroke=&#39;%2300bcd4&#39; stroke-linecap=&#39;round&#39; stroke-miterlimit=&#39;10&#39; stroke-width=&#39;2&#39; d=&#39;m4 7h22M4 15h22M4 23h22&#39;/%3e%3c/svg%3e") !important;
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
@@ -2798,4 +2940,53 @@ html {
     .carousel-item {
         min-height: -webkit-fill-available;
     }
+}
+
+/* Custom navbar toggler icon - MUST BE AT END */
+.navbar-toggler .navbar-toggler-icon,
+.navbar-toggler-icon,
+button.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300bcd4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% !important;
+}
+
+/* Change any red colors to sky blue across all pages */
+* {
+    /* Replace common red color values with sky blue */
+}
+
+/* Specific red to sky blue replacements */
+.text-danger, .btn-danger, .alert-danger, .border-danger {
+    color: #00bcd4 !important;
+    background-color: rgba(0, 188, 212, 0.1) !important;
+    border-color: #00bcd4 !important;
+}
+
+/* Any elements with red background */
+[style*="background-color: red"],
+[style*="background-color: #ff0000"],
+[style*="background-color: #dc3545"],
+[style*="background: red"],
+[style*="background: #ff0000"],
+[style*="background: #dc3545"] {
+    background-color: #00bcd4 !important;
+}
+
+/* Any elements with red text color */
+[style*="color: red"],
+[style*="color: #ff0000"],
+[style*="color: #dc3545"] {
+    color: #00bcd4 !important;
+}
+
+/* Any elements with red border */
+[style*="border-color: red"],
+[style*="border-color: #ff0000"],
+[style*="border-color: #dc3545"],
+[style*="border: red"],
+[style*="border: #ff0000"],
+[style*="border: #dc3545"] {
+    border-color: #00bcd4 !important;
 }

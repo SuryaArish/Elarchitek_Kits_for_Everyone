@@ -2068,7 +2068,7 @@ img {
     padding: 0.5rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(0, 188, 212, 0.2);
-    min-height: 70px;
+    min-height: 85px;
 }
 
 .navbar-brand {
@@ -2076,7 +2076,7 @@ img {
 }
 
 .logo-img {
-    height: 70px;
+    height: 80px;
     width: auto;
     transition: transform 0.3s ease;
 }

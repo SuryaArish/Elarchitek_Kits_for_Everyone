@@ -15,84 +15,77 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="workshop-styles.css">
   <link rel="stylesheet" href="enhanced-sections.css">
+  <style>
+    .carousel-caption {
+      position: absolute !important;
+      bottom: 20px !important;
+      left: 0px !important;
+      transform: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+      z-index: 10 !important;
+      text-align: left !important;
+    }
+    
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      .carousel-caption {
+        bottom: 10px !important;
+        padding: 10px !important;
+      }
+      .hero-text p {
+        font-size: 1.2rem !important;
+      }
+      .carousel-caption h4 {
+        font-size: 1.1rem !important;
+      }
+      .carousel-caption p {
+        font-size: 0.9rem !important;
+      }
+      .floating-buttons, .floating-buttons2, .floating-container, .joinus-floating-container {
+        display: none !important;
+      }
+      .whatmakes-head {
+        font-size: 1.5rem !important;
+      }
+      .workshop-card {
+        margin-bottom: 1rem !important;
+      }
+      .d-flex.align-items-center {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      .d-flex.align-items-center > div {
+        margin-bottom: 0.5rem !important;
+        margin-right: 0 !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+      .hero-text p {
+        font-size: 1rem !important;
+      }
+      .carousel-caption h4 {
+        font-size: 1rem !important;
+      }
+      .carousel-caption p {
+        font-size: 0.8rem !important;
+      }
+      .btn {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 1rem !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- _____________________________________navbar______________________________________________________________________ -->
-  <nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container custom-container">
-      <a href="index.html" class="d-flex align-items-center">
-        <div class="logo-container">
-          <img src="./images/new-logo.png" class="logo-img" alt="Logo" />
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item mx-3"><a class="nav-link" href="Maker-Hub/makerhub.html">3D Printing</a></li>
-          <li class="nav-item mx-3"><a class="nav-link" href="Work-Shop/workshop-home.html">Workshop</a></li>
-          <li class="nav-item mx-3"><a class="nav-link" href="Kits/kits-home.html">Kits</a></li>
-          <li class="nav-item mx-3"><a class="nav-link" href="mentoring.html">Mentoring</a></li>
-          <li class="nav-item mx-3"><a class="nav-link" href="aboutus.html">About Us</a></li>
-          <li class="nav-item mx-3"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- _____________________________________________ hero section ________________________________________________________ -->
-  <!-- Floating Buttons -->
-  <div class="floating-buttons">
-    <a href="Work-Shop/workshop-home.html" class="floating-btn">
-      <img src="./images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
-      <span>WORKSHOP</span>
-    </a>
-  </div>
-
-  <div class="floating-buttons2">
-    <a href="Maker-Hub/makerhub_product.html" class="floating-btn2">
-      <img src="./images/icons_for_floating_button/Group 329-1.png" alt="Workshop Icon" class="icon-flot" />
-      <span>PRODUCTS</span>
-    </a>
-  </div>
-
-  <div class="floating-container">
-    <div class="button-wrapper">
-      <div class="floating-btn4">
-        <i class="fas fa-share-alt"></i>
-      </div>
-
-      <div class="social-icons">
-        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- JOIN US Floating Button -->
-  <div class="joinus-floating-container">
-    <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
-      <img src="./images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png"
-        alt="Workshop Icon" class="icon-flot" />
-      <span>JOIN US</span>
-    </button>
-
-    <div class="joinus-extra-buttons" id="joinusExtraButtons">
-      <a href="./Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
-      <a href="./Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
-    </div>
-  </div>
-
-  <script>
-    function toggleJoinUsButtons() {
-      const buttons = document.getElementById("joinusExtraButtons");
-      buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
-    }
-  </script>
-  <!-- ____________________________________________________________________ -->
+  <!-- Header Include -->
+  <div id="header-placeholder"></div>
 
   <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
     data-bs-interval="2000">
@@ -100,7 +93,7 @@
     <div class="carousel-inner">
 
       <!-- Slide 1 -->
-      <div class="carousel-item active" style="background-image: url('./images/hero-img1.png');">
+      <div class="carousel-item active" style="background-image: url('./images/hero-img1.png'); left: 0% !important;">
         <div class="carousel-caption">
           <div class="hero-text">
             <p><em>Design</em> <small>boldly</small></p>
@@ -117,7 +110,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-item" style="background-image: url('./images/Workshop-page/Robotic/smart-asian-female-programer-learning-robot-arm-ai-coding-electronic-board-cable-stem-steam-she-try-testing-her-autonomous-robotic-arm-with-sensors-via-arduino-platform-home.png');">
+      <div class="carousel-item" style="background-image: url('./images/Workshop-page/Robotic/smart-asian-female-programer-learning-robot-arm-ai-coding-electronic-board-cable-stem-steam-she-try-testing-her-autonomous-robotic-arm-with-sensors-via-arduino-platform-home.png');  left: 0% !important">
         <div class="carousel-caption">
           <div class="hero-text">
             <p><em>Design</em> <small>boldly</small></p>
@@ -135,7 +128,7 @@
 
 
       <!-- Slide 3 -->
-      <div class="carousel-item" style="background-image: url('./images/Workshop-page/3D-Printing/technology-equipment-blue-laboratory-generated-by-ai.png');">
+      <div class="carousel-item" style="background-image: url('./images/Workshop-page/3D-Printing/technology-equipment-blue-laboratory-generated-by-ai.png');  left: 0% !important">
         <div class="carousel-caption">
           <div class="hero-text">
             <p><em>Design</em> <small>boldly</small></p>
@@ -153,7 +146,7 @@
 
 
       <!-- Slide 4 -->
-      <div class="carousel-item" style="background-image: url('./images/Workshop-page/Electronic/men-lab-doing-experiments-close-up.png ');">
+      <div class="carousel-item" style="background-image: url('./images/Workshop-page/Electronic/men-lab-doing-experiments-close-up.png ');  left: 0% !important">
         <div class="carousel-caption">
           <div class="hero-text">
             <p><em>Design</em> <small>boldly</small></p>
@@ -175,72 +168,42 @@
   <!-- About Section -->
   <section class="py-3 text-center">
     <div class="container">
-      <h2><strong>About ELARCHITEK !</strong></h2>
+      <h2 class="mt-3 mb-3"><strong>About ELARCHITEK !</strong></h2>
       <p class=" intro-text container text-muted">
         At elarchitek, we believe in teaching through understanding and practical application. Our educational kits make
         STEM concepts accessible and engaging for all learners.
         At elarchitek, we believe in teaching through understanding and practical application. Our educational kits make
         STEM concepts accessible and engaging for all learners.
       </p>
-      <a href="aboutus.html" class="btn btn-info text-black fw-bold">Learn More</a>
+      <a href="aboutus.html" class="btn btn-info text-black fw-bold mt-4">Learn More</a>
     </div>
   </section>
 
   <!-- Kits Section -->
-  <section class="py-4 kits-showcase">
+  <section class="py-5 kits-showcase">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold whatmakes-head">Browse Our Kits !</h2>
-        <p class="lead text-muted">Discover our comprehensive STEM learning kits designed for hands-on exploration</p>
-      </div>
-      
-      <div class="row g-4">
-        <!-- Kit Card 1 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="kit-showcase-card h-100">
-            <div class="kit-showcase-icon">
-              <i class="fas fa-microchip"></i>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <h2 class="fw-bold whatmakes-head mb-3 mb-md-5">Browse Our Kits !</h2>
+          <p class="lead text-muted mb-4">Discover our comprehensive STEM learning kits designed for hands-on exploration. From electronics to robotics, our educational kits make learning engaging and practical.</p>
+          <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center mb-4">
+            <div class="me-0 me-md-4 mb-2 mb-md-0">
+              <i class="fas fa-microchip" style="font-size: 2rem; color: #010510;"></i>
+              <span class="ms-2 fw-bold">Electronics</span>
             </div>
-            <h5>Electronic Kits</h5>
-            <p>Learn basic electronics through hands-on circuit building.</p>
-            <a href="Kits/electronickits.html" class="kit-showcase-btn">Explore</a>
+            <div class="me-0 me-md-4 mb-2 mb-md-0">
+              <i class="fas fa-robot" style="font-size: 2rem; color: #010510;"></i>
+              <span class="ms-2 fw-bold">Robotics</span>
+            </div>
+            <div class="mb-2 mb-md-0">
+              <i class="fas fa-flask" style="font-size: 2rem; color: #010510;"></i>
+              <span class="ms-2 fw-bold">STEM</span>
+            </div>
           </div>
+          <a href="Kits/kits-home.html" class="btn btn-info text-white fw-bold px-3 px-md-4 py-2 py-md-3">Explore All Kits <i class="fas fa-arrow-right ms-2"></i></a>
         </div>
-        
-        <!-- Kit Card 2 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="kit-showcase-card h-100">
-            <div class="kit-showcase-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h5>Computer Kits</h5>
-            <p>Explore digital logic and computer fundamentals.</p>
-            <a href="Kits/computerKits.html" class="kit-showcase-btn">Explore</a>
-          </div>
-        </div>
-        
-        <!-- Kit Card 3 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="kit-showcase-card h-100">
-            <div class="kit-showcase-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <h5>Robotic Kits</h5>
-            <p>Build intelligent robots with sensors and controllers.</p>
-            <a href="Kits/robotickits.html" class="kit-showcase-btn">Explore</a>
-          </div>
-        </div>
-        
-        <!-- Kit Card 4 -->
-        <div class="col-lg-3 col-md-6">
-          <div class="kit-showcase-card h-100">
-            <div class="kit-showcase-icon">
-              <i class="fas fa-flask"></i>
-            </div>
-            <h5>Learning Kits</h5>
-            <p>STEM education through science and math experiments.</p>
-            <a href="Kits/stemkits.html" class="kit-showcase-btn">Explore</a>
-          </div>
+        <div class="col-12 col-md-6 text-center">
+          <img src="./images/home_body_images/9837494 2.png" alt="STEM Kits" class="img-fluid rounded-3" style="max-height: 400px;">
         </div>
       </div>
     </div>
@@ -259,7 +222,7 @@
           <div class="row g-4">
             
             <!-- Workshop Card 1 -->
-            <div class="col-md-6">
+            <div class="col-12 col-sm-6 col-lg-6">
               <div class="workshop-card h-100">
                 <div class="workshop-icon">
                   <i class="fas fa-cube"></i>
@@ -271,7 +234,7 @@
             </div>
 
             <!-- Workshop Card 2 -->
-            <div class="col-md-6">
+            <div class="col-12 col-sm-6 col-lg-6">
               <div class="workshop-card h-100">
                 <div class="workshop-icon">
                   <i class="fas fa-microchip"></i>
@@ -283,7 +246,7 @@
             </div>
 
             <!-- Workshop Card 3 -->
-            <div class="col-md-6">
+            <div class="col-12 col-sm-6 col-lg-6">
               <div class="workshop-card h-100">
                 <div class="workshop-icon">
                   <i class="fas fa-robot"></i>
@@ -295,7 +258,7 @@
             </div>
 
             <!-- Workshop Card 4 -->
-            <div class="col-md-6">
+            <div class="col-12 col-sm-6 col-lg-6">
               <div class="workshop-card h-100">
                 <div class="workshop-icon">
                   <i class="fas fa-flask"></i>
@@ -318,7 +281,7 @@
 
   <section class="py-4">
     <div class="container">
-      <h2 class="text-center mb-4 fw-bold whatmakes-head ">What Makes Elarchitek Unique ?
+      <h2 class="text-center fw-bold whatmakes-head mb-5 ">What Makes Elarchitek Unique ?
       </h2>
       <div class="row">
         <!-- Card 1 -->
@@ -395,23 +358,25 @@
       <div class="row align-items-center">
 
         <!-- Left Box -->
-        <div class="col-md-6 mb-4 mb-md-0">
+        <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
           <!-- <div class="blue-box rounded-3"></div> -->
           <img src="./images/home_body_images/9837494 2.png" alt="Kits" class=" img-about img-fluid rounded-3" />
         </div>
 
         <!-- Right Content -->
-        <div class="col-md-6 mb-4 mt-5">
-          <h3 id="browse-kits-head"><strong>Expert Edge !</strong></h3>
+        <div class="col-12 col-md-6 mb-4 mt-3 mt-md-5">
+          <h3 id="browse-kits-head" class="text-center text-md-start"><strong>Expert Edge !</strong></h3>
 
           <div class="mb-3">
-            <p>At Elarchitek, we combine innovation, expertise, and teamwork to deliver impactful solutions. Our
+            <p class="text-center text-md-start">At Elarchitek, we combine innovation, expertise, and teamwork to deliver impactful solutions. Our
               professionals work closely across disciplines to ensure quality and creativity in every project. We turn
               ideas into reality with a commitment to excellence and lasting value.
             </p>
           </div>
 
-          <a href="aboutus.html" class="Ex-Button btn btn-info text-black fw-bold">Explore</a>
+          <div class="text-center text-md-start">
+            <a href="aboutus.html" class="Ex-Button btn btn-info text-black fw-bold">Explore</a>
+          </div>
         </div>
       </div>
     </div>
@@ -454,81 +419,14 @@
     </div>
   </div>
 
-  <!-- __________________________________________footer_____________________________________________________________________________ -->
-  <footer>
-    <div class="footer-main">
-      <!-- Logo -->
-      <div class="footer-col">
-        <img src="./images/new-logo.png" alt="Elarchitek Logo" class="footer-logo" />
-      </div>
-
-      <!-- Column 1 -->
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="index.html">Home</a>
-        <a href="Kits/robotickits.html">Robotic Kit</a>
-        <a href="Kits/computerKits.html">Computer Kit</a>
-        <a href="Kits/stemkits.html">STEM Kit</a>
-      </div>
-
-      <!-- Vertical Divider -->
-      <div class="divider"></div>
-
-      <!-- Column 2 -->
-      <div class="footer-col">
-        <h4>Workshops</h4>
-        <a href="Maker-Hub/makerhub.html">3D Printing</a>
-        <a href="Work-Shop/Roboticmastery.html">Robotic Workshop</a>
-        <a href="Work-Shop/electronicmastery.html">Electronic Workshop</a>
-        <a href="Work-Shop/stem.html">STEM Workshop</a>
-      </div>
-
-      <!-- Vertical Divider -->
-      <div class="divider"></div>
-
-      <!-- Column 3 -->
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="Work-Shop/3d_printing_mastery.html">3D Printing Workshop</a>
-        <a href="mentoring.html">Learning Center</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="contactus.html">Contact Us</a>
-      </div>
-
-
-      <!-- Vertical Divider -->
-      <div class="divider"></div>
-
-      <!-- Contact Info -->
-      <div class="footer-col contact-info">
-        <h4>Contact</h4>
-        <p><i class="fas fa-map-marker-alt"></i> ELARCHITEK, Chennai, India</p>
-        <p><i class="fas fa-phone"></i> +91-1234567890</p>
-        <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
-      </div>
-
-    </div>
-
-    <!-- Divider -->
-    <hr class="footer-divider" />
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <div class="footer-links">
-        <p>Terms-and-conditions</p>
-        <p>Privacy-policy</p>
-      </div>
-      <div class="footer-social">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-youtube"></i>
-      </div>
-    </div>
-    <p class="footer-copy">© 2025 Elarchitek. All rights reserved. Empowering Innovation Through Electronics.</p>
-  </footer>
+  <!-- Footer Include -->
+  <div id="footer-placeholder"></div>
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Include Script -->
+  <script src="./js/include.js"></script>
 
   <!-- ✅ Custom Script to allow toggle-on-click -->
   <!-- ________________________________________________card section___________________________________________________ -->

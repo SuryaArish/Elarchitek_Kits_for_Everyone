@@ -1,0 +1,69 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container custom-container">
+    <a href="index.html" class="d-flex align-items-center">
+      <div class="logo-container">
+        <img src="./images/new-logo.png" class="logo-img" alt="Logo" />
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-3"><a class="nav-link" href="Kits/kits-home.html">Kits</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="mentoring.html">Mentoring</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item mx-3"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+  <a href="Work-Shop/workshop-home.html" class="floating-btn">
+    <img src="./images/icons_for_floating_button/Group 329.png" alt="Workshop Icon" class="icon-flot" />
+    <span>WORKSHOP</span>
+  </a>
+</div>
+
+<div class="floating-buttons2">
+  <a href="Maker-Hub/makerhub_product.html" class="floating-btn2">
+    <img src="./images/icons_for_floating_button/Group 329-1.png" alt="Workshop Icon" class="icon-flot" />
+    <span>PRODUCTS</span>
+  </a>
+</div>
+
+<div class="floating-container">
+  <div class="button-wrapper">
+    <div class="floating-btn4">
+      <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="joinus-floating-container">
+  <button class="joinus-main-btn" onclick="toggleJoinUsButtons()">
+    <img src="./images/icons_for_joinus/ChatGPT_Image_Jun_22__2025__10_42_20_PM-removebg-preview 4.png"
+      alt="Workshop Icon" class="icon-flot" />
+    <span>JOIN US</span>
+  </button>
+  <div class="joinus-extra-buttons" id="joinusExtraButtons">
+    <a href="./Intern-Employee/intern.html" class="joinus-extra-btn">INTERN</a>
+    <a href="./Intern-Employee/employee.html" class="joinus-extra-btn">EMPLOYEE</a>
+  </div>
+</div>
+
+<script>
+  function toggleJoinUsButtons() {
+    const buttons = document.getElementById("joinusExtraButtons");
+    buttons.style.display = (buttons.style.display === "flex") ? "none" : "flex";
+  }
+</script>

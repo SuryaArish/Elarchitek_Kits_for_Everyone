@@ -115,34 +115,42 @@ body, html {
   padding: 0;
 }
 
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .carousel-item {
   height: 100vh;
   background-size: cover;
-  background-position:left;
-  justify-content: flex-start;
+  background-position: center;
   position: relative;
 }
-.justify{
-  text-align: justify;
-}
-.carousel-caption {
+
+.static-caption {
   position: absolute;
   top: 0;
-  left: 0 !important;
-  right: 8;
+  left: 0;
+  right: auto;
+  bottom: auto;
   text-align: left;
-  padding: 40px 40px;
-  max-width: 350px;
-  height: 200%;
+  padding: 40px;
+  max-width: 400px;
+  height: 100vh;
   color: rgb(7, 7, 7) !important;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 1s ease-out forwards;
-  animation-delay: 0.3s;
+  border-radius: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.justify{
+  text-align: justify;
 }
 
 .hero-text {
@@ -224,12 +232,7 @@ body, html {
 }
 
 
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 /* Modern Button Styles */
 .btn-info {
@@ -265,10 +268,17 @@ body, html {
   left: 100%;
 }
 
-.btn-info:hover {
-  transform: translateX(-10px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0, 188, 212, 0.6);
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 0% !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
 }
+
 
 @media (max-width: 768px) {
   .carousel-caption {
@@ -1180,6 +1190,9 @@ footer::before {
 .carousel-caption .btn-info {
     margin: 20px 0;
     display: inline-block;
+    color: white !important;
+    border: none;
+    padding: 15px;
 }
 
 /* Scrolling Text Section */

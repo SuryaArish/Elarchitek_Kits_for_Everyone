@@ -30,6 +30,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
   color: #333;
   margin-bottom: 2rem;
 }
@@ -218,10 +219,14 @@
 }
 
 /* Additional styling for better visual hierarchy */
-.section-title {
-  position: relative;
-  display: inline-block;
+.section-title-managing{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+    color: #333;
+    margin-bottom: 2rem;
 }
+
 
 .section-title::after {
   content: '';

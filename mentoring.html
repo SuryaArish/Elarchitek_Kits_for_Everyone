@@ -26,8 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-3"><a class="nav-link" href="Maker-Hub/makerhub.html">3D Printing</a></li>
-                    <li class="nav-item mx-3"><a class="nav-link" href="Work-Shop/workshop-home.html">Workshop</a></li>
+
                     <li class="nav-item mx-3"><a class="nav-link" href="Kits/kits-home.html">Kits</a></li>
                     <li class="nav-item mx-3"><a class="nav-link" href="mentoring.html">Mentoring</a></li>
                     <li class="nav-item mx-3"><a class="nav-link" href="aboutus.html">About Us</a></li>
@@ -84,48 +83,34 @@
     </script>
 
     <!-- Hero Section -->
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
-        data-bs-interval="2000">
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url('./images/Mentoring-Images/programmer-night.png');">
-                <div class="carousel-caption">
-                    <div class="hero-text" style="margin-bottom: 3rem; font-size: 1.2em;">
-                        <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Mentors</em> <small>that guide</small></p>
-                        <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Progress</em> <small>that shows</small></p>
-                        <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Success</em> <small>that lasts</small></p>
-                    </div>
-                    <h4>Personalized mentoring for every learner...</h4>
-                    <p>
-                        At Elarchitek, we provide expert guidance and support to help you master programming,
-                        electronics, and technology through personalized mentoring sessions.
-                    </p>
-                    <a href="#mentoring-programs" class="btn btn-info text-black fw-bold">Explore Programs</a>
-                </div>
+    <div class="hero-container">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+            data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('./images/Mentoring-Images/programmer-night.png');"></div>
+                <div class="carousel-item" style="background-image: url('./images/Mentoring-Images/three-women-working-together.png');"></div>
             </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item" style="background-image: url('./images/Mentoring-Images/three-women-working-together.png');">
-                <div class="carousel-caption">
-                    <div class="hero-text" style="margin-bottom: 3rem; font-size: 1.2em;">
-                        <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Learn</em> <small>with experts</small></p>
-                        <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Build</em> <small>real projects</small></p>
-                        <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Grow</em> <small>your skills</small></p>
-                    </div>
-                    <h4>One-on-one guidance for maximum impact...</h4>
-                    <p>
-                        Our experienced mentors work closely with students to provide personalized learning
-                        experiences that accelerate skill development and boost confidence.
-                    </p>
-                    <a href="#mentoring-programs" class="btn btn-info text-black fw-bold">Start Learning</a>
-                </div>
+        </div>
+        
+        <div class="static-caption">
+            <div class="hero-text" style="margin-bottom: 3rem; font-size: 1.2em;">
+                <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Mentors</em> <small>that guide</small></p>
+                <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Progress</em> <small>that shows</small></p>
+                <p style="margin-bottom: 1.2rem; line-height: 1.6;"><em>Success</em> <small>that lasts</small></p>
             </div>
+            <h4 class="personalized-txt">Personalized mentoring for every learner...</h4>
+            <p>
+                At Elarchitek, we provide expert guidance and support to help you master programming,
+                electronics, and technology through personalized mentoring sessions.
+            </p>
+            <a href="#mentoring-programs" class="btn btn-info text-black fw-bold">Explore Programs</a>
         </div>
     </div>
 
     <!-- Mentoring Programs Section -->
     <section class="py-5" id="mentoring-programs">
         <div class="container">
-            <h2 class="text-center mb-5 fw-bold">Our Mentoring Programs</h2>
+            <h2 class="text-center mb-5 mentoring-head">Our Mentoring Programs</h2>
             
             <!-- Programming for Children -->
             <div class="mentoring-program mb-5">
@@ -281,6 +266,57 @@
                              alt="Personalized Classes" class="program-image program-image-large">
                     </div>
                 </div>
+
+
+           <!-- Programming for Children -->
+            <div class="mentoring-program mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="program-title">Artificial Inteligence classes</h3>
+                        <p class="program-description">
+                            At Elarchitek, we believe it's never too early to start exploring STEM! Our child-friendly sessions
+                            introduce Science, Technology, Engineering, and Math concepts through hands-on experiments and
+                            interactive projects—perfect for young minds to explore curiosity and innovation.
+                        </p>
+                        <p class="program-subtitle">Fun, Interactive, and Creative STEM Mentorship for Young Minds</p>
+                        <button class="program-btn" onclick="toggleDropdown('program1')">Explore Program</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./images/Mentoring-Images/kid-learning-web-design-coding-600nw-300498623.webp" 
+                             alt="Children Programming" class="program-image">
+                    </div>
+                </div>
+                
+                <!-- Program Details -->
+                <div class="program-details" id="program1">
+                    <div class="row mt-4">
+                        <div class="col-md-8">
+                            <div class="details-card">
+                                <h4>What You'll Learn</h4>
+                                <ul>
+                                    <li>Basic Science Experiments</li>
+                                    <li>Simple Engineering Projects</li>
+                                    <li>Math Through Fun Activities</li>
+                                    <li>Technology & Innovation Basics</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-card">
+                                <h5>Program Info</h5>
+                                <p><i class="fas fa-users"></i> Age: 7-12 years</p>
+                                <p><i class="fas fa-clock"></i> Duration: 8 weeks</p>
+                                <p><i class="fas fa-calendar"></i> 2 sessions/week</p>
+                                <p><i class="fas fa-envelope"></i> support@elarchitek.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
                 
                 <!-- Program Details -->
                 <div class="program-details" id="program4">

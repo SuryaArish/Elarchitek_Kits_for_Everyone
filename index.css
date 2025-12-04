@@ -60,6 +60,10 @@ body, html {
     padding: 0;
   }
 
+  #heroCarousel {
+    margin-top: 85px;
+  }
+
   .carousel-item {
     height: 100vh;
     background-size: cover;
@@ -71,7 +75,7 @@ body, html {
   .carousel-caption {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0% !important;
     right: auto;
     bottom: auto;
     text-align: left;
@@ -292,6 +296,8 @@ body, html {
 }
 .intro-text{
   text-align: justify;
+  font-size: 19px;
+  margin-bottom: 4px;
 }
 
 
@@ -2069,6 +2075,10 @@ img {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(0, 188, 212, 0.2);
     min-height: 85px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar-brand {

@@ -9,6 +9,10 @@ body {
   background: #010510;
   padding: 0.5% 0%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo-container {
@@ -48,6 +52,12 @@ body {
 
 
 /* Mentoring Programs Section */
+.mentoring-head{
+ font-weight: 700;
+    font-size: 2.5rem;
+    color: #010510;
+    margin: 2rem 0;
+}
 .mentoring-program {
   margin-bottom: 4rem;
 }
@@ -432,33 +442,45 @@ footer::before {
 
 /* Responsive Design */
 /* Hero Section */
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 0;
+}
+
 .carousel-item {
   height: 100vh;
   background-size: cover;
-  background-position: left;
+  background-position: center;
   position: relative;
 }
 
-.carousel-caption {
+.static-caption {
   position: absolute;
-  top: 0;
-  left: 0 !important;
+  top: 85px;
+  right: auto;
+  bottom: auto;
   text-align: left;
-  padding: 40px 40px;
-  max-width: 350px;
-  height: 200%;
+  padding: 40px;
+  max-width: 500px;
+  height: calc(100vh - 85px);
   color: rgb(7, 7, 7) !important;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 1s ease-out forwards;
-  animation-delay: 0.3s;
+  border-radius: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.personalized-txt{
+  margin-top: -8%;
 }
 
 .hero-text {
+  margin-top: 6%;
   background: linear-gradient(145deg, #010510, rgba(1, 5, 16, 0.2));
   padding: 25px;
   border-radius: 20px;
@@ -516,12 +538,7 @@ footer::before {
   margin-top: 10px;
 }
 
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 /* Modern Button Styles */
 .btn-info {
@@ -538,6 +555,7 @@ footer::before {
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 8px 25px rgba(0, 33, 75, 0.4);
+  padding-bottom: 35px;
 }
 
 .btn-info::before {
